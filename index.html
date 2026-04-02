@@ -9,65 +9,12 @@
     content="Fiscalização de obras, perícias e laudos de engenharia para condomínios, escritórios de advocacia e pessoa física. Florianópolis, SC." />
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0B1929',
-            'primary-dk': '#071018',
-            accent: '#C49759',
-            surface: '#F4F5F8',
-          },
-          fontFamily: {
-            heading: ['Oswald', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <script src="assets/js/tailwind.config.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet" />
-
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      color: #0B1929;
-    }
-
-    .font-heading {
-      font-family: 'Oswald', sans-serif;
-    }
-
-    .nav-link {
-      position: relative;
-    }
-
-    .nav-link.active::after,
-    .nav-link:hover::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #C49759;
-      border-radius: 2px;
-    }
-
-    .card-service:hover {
-      transform: translateY(-4px);
-    }
-
-    .card-service {
-      transition: transform 0.25s ease;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body class="bg-white">
@@ -79,7 +26,7 @@
     <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
 
       <a href="index.html" class="flex-shrink-0">
-        <img src="assets/logo.svg" alt="Mulder Engenharia" class="h-10" />
+        <img src="assets/icons/logo.svg" alt="Mulder Engenharia" class="h-10" />
       </a>
 
       <div class="hidden md:flex items-center gap-8">
@@ -502,7 +449,7 @@
 
         <!-- Logo + descrição -->
         <div>
-          <img src="assets/logo-dark.svg" alt="Mulder Engenharia" class="h-10 mb-5" />
+          <img src="assets/icons/logo-dark.svg" alt="Mulder Engenharia" class="h-10 mb-5" />
           <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
             Engenharia diagnóstica, fiscalização de obras e laudos técnicos na Grande Florianópolis.
           </p>
@@ -555,18 +502,7 @@
   <!-- ═══════════════════════════════════════════════════ -->
   <!-- JS                                                 -->
   <!-- ═══════════════════════════════════════════════════ -->
-  <script>
-    const btn = document.getElementById('menuBtn')
-    const menu = document.getElementById('mobileMenu')
-    const open = document.getElementById('iconOpen')
-    const close = document.getElementById('iconClose')
-
-    btn.addEventListener('click', () => {
-      menu.classList.toggle('hidden')
-      open.classList.toggle('hidden')
-      close.classList.toggle('hidden')
-    })
-  </script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 

@@ -1,0 +1,36 @@
+body {
+  font-family: 'Inter', sans-serif;
+  color: #0B1929;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #C49759;
+  border-radius: 2px;
+}
+
+.card-service {
+  transition: transform 0.25s ease;
+}
+
+.card-service:hover {
+  transform: translateY(-4px);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #C49759;
+  box-shadow: 0 0 0 3px rgba(196, 151, 89, 0.15);
+}
