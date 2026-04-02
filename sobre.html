@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nós — Mulder Engenharia</title>
+  <meta name="description" content="Conheça a Mulder Engenharia e o Engenheiro Civil Julian Mulder. Mais de 10 anos de experiência em Florianópolis, SC." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:      '#0B1929',
+            'primary-dk': '#071018',
+            accent:       '#C49759',
+            surface:      '#F4F5F8',
+          },
+          fontFamily: {
+            heading: ['Oswald', 'sans-serif'],
+            body:    ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; color: #0B1929; }
+    .nav-link { position: relative; }
+    .nav-link.active::after,
+    .nav-link:hover::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: #C49759;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+      <a href="index.html" class="flex-shrink-0">
+        <img src="assets/logo.svg" alt="Mulder Engenharia" class="h-10" />
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html"   class="nav-link font-heading font-medium text-primary uppercase tracking-wide text-sm">Início</a>
+        <a href="sobre.html"   class="nav-link active font-heading font-medium text-primary uppercase tracking-wide text-sm">Sobre Nós</a>
+        <a href="index.html#servicos" class="nav-link font-heading font-medium text-primary uppercase tracking-wide text-sm">Serviços</a>
+        <a href="contato.html" class="nav-link font-heading font-medium text-primary uppercase tracking-wide text-sm">Contato</a>
+      </div>
+      <a href="contato.html"
+         class="hidden md:inline-flex items-center bg-accent text-primary font-heading font-semibold uppercase tracking-widest text-xs px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+        Solicitar Orçamento
+      </a>
+      <button id="menuBtn" class="md:hidden p-2 text-primary">
+        <svg id="iconOpen"  class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="iconClose" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-6 flex flex-col gap-5">
+      <a href="index.html"   class="font-heading font-semibold text-primary uppercase tracking-wide text-sm">Início</a>
+      <a href="sobre.html"   class="font-heading font-semibold text-accent uppercase tracking-wide text-sm">Sobre Nós</a>
+      <a href="index.html#servicos" class="font-heading font-semibold text-primary uppercase tracking-wide text-sm">Serviços</a>
+      <a href="contato.html" class="font-heading font-semibold text-primary uppercase tracking-wide text-sm">Contato</a>
+      <a href="contato.html" class="bg-accent text-primary font-heading font-semibold uppercase tracking-widest text-xs px-6 py-3 rounded-full text-center">Solicitar Orçamento</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="pt-20 bg-primary">
+    <div class="max-w-7xl mx-auto px-6 py-20">
+      <p class="text-gray-500 text-sm mb-3 font-heading uppercase tracking-widest">
+        <a href="index.html" class="hover:text-accent transition-colors">Início</a>
+        <span class="mx-2 text-gray-600">/</span>
+        <span class="text-accent">Sobre Nós</span>
+      </p>
+      <h1 class="font-heading text-5xl lg:text-6xl font-bold text-white">
+        Conheça a Mulder Engenharia
+      </h1>
+    </div>
+  </section>
+
+  <!-- CEO / FUNDADOR -->
+  <section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="assets/images/julian-mulder.jpg"
+               alt="Julian Mulder — Engenheiro Civil"
+               class="w-full h-[520px] object-cover object-top" />
+        </div>
+        <!-- Badge -->
+        <div class="absolute -bottom-6 -right-6 bg-accent rounded-2xl p-6 text-center shadow-xl">
+          <p class="font-heading font-bold text-white text-4xl">10+</p>
+          <p class="text-white text-xs uppercase tracking-widest mt-1">Anos de<br/>Experiência</p>
+        </div>
+      </div>
+
+      <div>
+        <span class="inline-block text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-4">
+          CEO &amp; Fundador
+        </span>
+        <h2 class="font-heading text-4xl font-bold text-primary mb-2">Julian Mulder</h2>
+        <p class="text-accent font-heading font-semibold text-sm uppercase tracking-wider mb-8">Engenheiro Civil — CREA/SC</p>
+
+        <p class="text-gray-500 leading-relaxed mb-5">
+          Formado em Engenharia Civil pela <strong class="text-primary">UFSC</strong>, Julian Mulder iniciou sua carreira gerenciando e fiscalizando obras e reformas comerciais em Shopping Centers — atuando em mais de 30 lojas de grandes marcas como Youcom, Paquetá Esportes, Vivara e Lojas Colombo.
+        </p>
+        <p class="text-gray-500 leading-relaxed mb-5">
+          Em 2019, passou a ter foco exclusivo na <strong class="text-primary">Engenharia Diagnóstica</strong>, especializando-se em laudos técnicos, fiscalização predial e assistência técnica judicial. Desde então, atendeu mais de 50 condomínios residenciais e comerciais na Grande Florianópolis.
+        </p>
+        <p class="text-gray-500 leading-relaxed mb-10">
+          Possui pós-graduação em Patologia das Construções e atua há mais de 5 anos na esfera judicial e extrajudicial, elaborando pareceres técnicos, contra laudos e quesitos para escritórios de advocacia.
+        </p>
+
+        <!-- Stats rápidas -->
+        <div class="grid grid-cols-2 gap-6">
+          <div class="border-l-4 border-accent pl-4">
+            <p class="font-heading font-bold text-primary text-2xl">+50</p>
+            <p class="text-gray-500 text-sm">Condomínios atendidos</p>
+          </div>
+          <div class="border-l-4 border-accent pl-4">
+            <p class="font-heading font-bold text-primary text-2xl">+5 anos</p>
+            <p class="text-gray-500 text-sm">Atuação judicial</p>
+          </div>
+          <div class="border-l-4 border-accent pl-4">
+            <p class="font-heading font-bold text-primary text-2xl">+30 lojas</p>
+            <p class="text-gray-500 text-sm">Reformas em Shoppings</p>
+          </div>
+          <div class="border-l-4 border-accent pl-4">
+            <p class="font-heading font-bold text-primary text-2xl">UFSC</p>
+            <p class="text-gray-500 text-sm">Graduação em Eng. Civil</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS DARK -->
+  <section class="bg-primary py-20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+      <div>
+        <p class="font-heading text-5xl font-bold text-accent mb-2">100%</p>
+        <p class="text-gray-400 text-xs uppercase tracking-widest">Graduado Eng. Civil</p>
+      </div>
+      <div>
+        <p class="font-heading text-5xl font-bold text-accent mb-2">100%</p>
+        <p class="text-gray-400 text-xs uppercase tracking-widest">Perito Judicial</p>
+      </div>
+      <div>
+        <p class="font-heading text-5xl font-bold text-accent mb-2">100%</p>
+        <p class="text-gray-400 text-xs uppercase tracking-widest">Esp. Eng. Diagnóstica</p>
+      </div>
+      <div>
+        <p class="font-heading text-5xl font-bold text-accent mb-2">+10</p>
+        <p class="text-gray-400 text-xs uppercase tracking-widest">Anos Gerenciando Obras</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSÃO, VISÃO E VALORES -->
+  <section class="bg-surface py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs text-center mb-3">Nossa Essência</p>
+      <h2 class="font-heading text-4xl font-bold text-primary text-center mb-16">Missão, Visão e Valores</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="bg-accent rounded-xl p-3 w-fit mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-primary mb-4">Missão</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Prestar serviços de engenharia com excelência técnica, ética e transparência, contribuindo para a segurança e qualidade das construções na Grande Florianópolis.
+          </p>
+        </div>
+
+        <div class="bg-primary rounded-2xl p-8 shadow-sm">
+          <div class="bg-white bg-opacity-10 rounded-xl p-3 w-fit mb-6">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-white mb-4">Visão</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Ser a empresa de referência em engenharia diagnóstica e fiscalização de obras em Santa Catarina, reconhecida pela qualidade técnica e pela confiança dos clientes.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <div class="bg-accent rounded-xl p-3 w-fit mb-6">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading text-2xl font-bold text-primary mb-4">Valores</h3>
+          <ul class="text-gray-500 text-sm leading-relaxed space-y-2">
+            <li class="flex items-center gap-2"><span class="text-accent font-bold">→</span> Ética profissional</li>
+            <li class="flex items-center gap-2"><span class="text-accent font-bold">→</span> Comprometimento</li>
+            <li class="flex items-center gap-2"><span class="text-accent font-bold">→</span> Transparência</li>
+            <li class="flex items-center gap-2"><span class="text-accent font-bold">→</span> Excelência técnica</li>
+            <li class="flex items-center gap-2"><span class="text-accent font-bold">→</span> Respeito ao cliente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGULAMENTAÇÕES -->
+  <section class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-3">Regulamentações</p>
+      <h2 class="font-heading text-3xl font-bold text-primary mb-12">Seguimos normas e exigências</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-primary text-white font-heading font-semibold uppercase tracking-widest text-xs px-6 py-3 rounded">ABNT</span>
+        <span class="bg-primary text-white font-heading font-semibold uppercase tracking-widest text-xs px-6 py-3 rounded">CREA</span>
+        <span class="border-2 border-primary text-primary font-heading font-semibold uppercase tracking-widest text-xs px-6 py-3 rounded">Estatutos Condominiais</span>
+        <span class="border-2 border-primary text-primary font-heading font-semibold uppercase tracking-widest text-xs px-6 py-3 rounded">Código de Ética do Engenheiro</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-primary py-24">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-4">Vamos trabalhar juntos</p>
+      <h2 class="font-heading text-4xl lg:text-5xl font-bold text-white mb-6">
+        Pronto para trabalhar com a Mulder?
+      </h2>
+      <p class="text-gray-400 text-lg mb-10">Orçamento sem compromisso. Resposta em até 24h.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contato.html"
+           class="bg-accent text-primary font-heading font-semibold uppercase tracking-widest text-xs px-10 py-4 rounded-full hover:opacity-90 transition">
+          Fale Conosco &rarr;
+        </a>
+        <a href="https://wa.me/5548999360922" target="_blank"
+           class="border-2 border-white text-white font-heading font-semibold uppercase tracking-widest text-xs px-10 py-4 rounded-full hover:bg-white hover:text-primary transition">
+          WhatsApp &#8599;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary-dk py-16">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <img src="assets/logo-dark.svg" alt="Mulder Engenharia" class="h-10 mb-5" />
+          <p class="text-gray-500 text-sm leading-relaxed max-w-xs">
+            Engenharia diagnóstica, fiscalização de obras e laudos técnicos na Grande Florianópolis.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white uppercase tracking-widest text-xs mb-5">Serviços</h4>
+          <ul class="flex flex-col gap-3">
+            <li><a href="index.html#servicos" class="text-gray-500 text-sm hover:text-accent transition-colors">Fiscalização de Obras</a></li>
+            <li><a href="index.html#servicos" class="text-gray-500 text-sm hover:text-accent transition-colors">Laudos de Engenharia</a></li>
+            <li><a href="index.html#servicos" class="text-gray-500 text-sm hover:text-accent transition-colors">Assistência Técnica Judicial</a></li>
+            <li><a href="sobre.html" class="text-gray-500 text-sm hover:text-accent transition-colors">Sobre Nós</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-heading font-semibold text-white uppercase tracking-widest text-xs mb-5">Contato</h4>
+          <ul class="flex flex-col gap-3">
+            <li class="text-gray-500 text-sm">📍 Florianópolis, SC — Brasil</li>
+            <li><a href="https://wa.me/5548999360922" target="_blank" class="text-gray-500 text-sm hover:text-accent transition-colors">📱 (48) 9 9936-0922</a></li>
+            <li><a href="mailto:contato@mulderengenharia.com.br" class="text-gray-500 text-sm hover:text-accent transition-colors">✉️ contato@mulderengenharia.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white border-opacity-10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-600 text-xs">© 2025 Mulder Engenharia. Todos os direitos reservados.</p>
+        <p class="text-gray-600 text-xs">CREA — Florianópolis, SC</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn')
+    const menu = document.getElementById('mobileMenu')
+    const open = document.getElementById('iconOpen')
+    const close = document.getElementById('iconClose')
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden')
+      open.classList.toggle('hidden')
+      close.classList.toggle('hidden')
+    })
+  </script>
+
+</body>
+</html>
