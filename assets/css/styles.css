@@ -82,3 +82,25 @@ select:focus {
 .card-info    { background: #FFFFFF; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
 .card-stat    { background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .card-feature { background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+
+/* ── Badges & Tags — design system ─────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+}
+
+.badge-solid-dark   { background: #0B1929; color: #FFFFFF; border-color: #0B1929; }
+.badge-solid-accent { background: #C49759; color: #0B1929; border-color: #C49759; }
+.badge-outline      { background: transparent; color: #0B1929; border-color: #0B1929; }
+.badge-outline-accent { background: transparent; color: #C49759; border-color: #C49759; }
+.badge-ghost        { background: transparent; color: #6B7685; border-color: #9BA6B2; }
