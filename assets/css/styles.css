@@ -104,3 +104,21 @@ select:focus {
 .badge-outline      { background: transparent; color: #0B1929; border-color: #0B1929; }
 .badge-outline-accent { background: transparent; color: #C49759; border-color: #C49759; }
 .badge-ghost        { background: transparent; color: #6B7685; border-color: #9BA6B2; }
+
+/* ── Inputs — estado de erro ────────────────────────── */
+.input-error {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+}
+.label-error { color: #DC2626; }
+.field-error-msg {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  color: #DC2626;
+  font-size: 11px;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 600;
+  margin-top: 6px;
+}
+.field-error-msg.visible { display: flex; }

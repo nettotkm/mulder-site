@@ -162,23 +162,25 @@
         <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label mb-2">Formulário</p>
         <h3 class="font-heading text-h3 font-bold text-primary mb-8">Solicite seu Orçamento</h3>
 
-        <form action="mail.php" method="POST" class="flex flex-col gap-5">
+        <form action="mail.php" method="POST" class="flex flex-col gap-5" novalidate>
 
           <div>
-            <label class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
+            <label id="label-nome" class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
               Nome completo <span class="text-accent">*</span>
             </label>
-            <input type="text" name="nome" required placeholder="Seu nome"
+            <input id="input-nome" type="text" name="nome" required placeholder="Seu nome"
               class="w-full bg-white border border-surface rounded-lg px-4 py-3 text-sm text-primary placeholder-neutral-400 transition-all" />
+            <p id="error-nome" class="field-error-msg">⚠ Campo obrigatório</p>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-5">
             <div>
-              <label class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
+              <label id="label-email" class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
                 E-mail <span class="text-accent">*</span>
               </label>
-              <input type="email" name="email" required placeholder="seu@email.com"
+              <input id="input-email" type="email" name="email" required placeholder="seu@email.com"
                 class="w-full bg-white border border-surface rounded-lg px-4 py-3 text-sm text-primary placeholder-neutral-400 transition-all" />
+              <p id="error-email" class="field-error-msg">⚠ Campo obrigatório</p>
             </div>
             <div>
               <label class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
@@ -190,10 +192,10 @@
           </div>
 
           <div>
-            <label class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
+            <label id="label-servico" class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
               Qual serviço você precisa? <span class="text-accent">*</span>
             </label>
-            <select name="servico" required
+            <select id="input-servico" name="servico" required
               class="w-full bg-white border border-surface rounded-lg px-4 py-3 text-sm text-primary transition-all appearance-none">
               <option value="" disabled selected>Selecione um serviço</option>
               <option value="fiscalizacao">Fiscalização de Obras</option>
@@ -204,6 +206,7 @@
               <option value="judicial">Assistência Técnica Judicial</option>
               <option value="outro">Outro</option>
             </select>
+            <p id="error-servico" class="field-error-msg">⚠ Campo obrigatório</p>
           </div>
 
           <div>
@@ -313,6 +316,36 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    const form = document.querySelector('form')
+
+    function setError(inputId, labelId, errorId, hasError) {
+      document.getElementById(inputId).classList.toggle('input-error', hasError)
+      document.getElementById(labelId).classList.toggle('label-error', hasError)
+      document.getElementById(errorId).classList.toggle('visible', hasError)
+    }
+
+    form.addEventListener('submit', function (e) {
+      const nome    = document.getElementById('input-nome')
+      const email   = document.getElementById('input-email')
+      const servico = document.getElementById('input-servico')
+      let valid = true
+
+      if (!nome.value.trim())    { setError('input-nome',    'label-nome',    'error-nome',    true);  valid = false } else { setError('input-nome',    'label-nome',    'error-nome',    false) }
+      if (!email.value.trim())   { setError('input-email',   'label-email',   'error-email',   true);  valid = false } else { setError('input-email',   'label-email',   'error-email',   false) }
+      if (!servico.value)        { setError('input-servico', 'label-servico', 'error-servico', true);  valid = false } else { setError('input-servico', 'label-servico', 'error-servico', false) }
+
+      if (!valid) e.preventDefault()
+    })
+
+    // Limpa erro ao digitar/selecionar
+    const fieldMap = { 'input-nome': ['label-nome','error-nome'], 'input-email': ['label-email','error-email'], 'input-servico': ['label-servico','error-servico'] }
+    Object.keys(fieldMap).forEach(id => {
+      const el = document.getElementById(id)
+      const evt = el.tagName === 'SELECT' ? 'change' : 'input'
+      el.addEventListener(evt, () => setError(id, fieldMap[id][0], fieldMap[id][1], false))
+    })
+  </script>
 
 </body>
 
