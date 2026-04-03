@@ -21,6 +21,7 @@ body {
 
 .card-service {
   transition: transform 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .card-service:hover {
@@ -34,3 +35,50 @@ select:focus {
   border-color: #C49759;
   box-shadow: 0 0 0 3px rgba(196, 151, 89, 0.15);
 }
+
+/* ── Botões — design system ─────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Tamanhos */
+.btn-lg { padding: 18px 32px; font-size: 15px; line-height: 1; }
+.btn-md { padding: 13px 24px; font-size: 13px; line-height: 1; }
+.btn-sm { padding: 8px  16px; font-size: 11px; line-height: 1; }
+
+/* Variantes */
+.btn-primary { background: #0B1929; color: #FFFFFF; border-color: #0B1929; }
+.btn-primary:hover { opacity: 0.85; }
+
+.btn-accent { background: #C49759; color: #0B1929; border-color: #C49759; }
+.btn-accent:hover { opacity: 0.9; }
+
+.btn-outline-dark { background: transparent; color: #0B1929; border-color: #0B1929; }
+.btn-outline-dark:hover { background: #0B1929; color: #FFFFFF; }
+
+.btn-outline-light { background: transparent; color: #FFFFFF; border-color: #FFFFFF; }
+.btn-outline-light:hover { background: #FFFFFF; color: #0B1929; }
+
+.btn-ghost { background: transparent; color: #C49759; border-color: rgba(196,151,89,0.35); opacity: 0.65; }
+.btn-ghost:hover { opacity: 1; }
+
+/* ── Cards — design system ──────────────────────────── */
+.card {
+  border-radius: 24px;
+  padding: 32px;
+}
+.card-info    { background: #FFFFFF; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.card-stat    { background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.card-feature { background: #FFFFFF; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
