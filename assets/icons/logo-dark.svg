@@ -1,116 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 170" width="440" height="170">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 48 265 248" width="100%" height="100%">
   <defs>
-    <linearGradient id="chromeD" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#C8D8E8"/>
-      <stop offset="18%"  stop-color="#F0F5FA"/>
-      <stop offset="38%"  stop-color="#8AAABB"/>
-      <stop offset="55%"  stop-color="#E8EFF6"/>
-      <stop offset="75%"  stop-color="#5A7A90"/>
-      <stop offset="100%" stop-color="#2E4A60"/>
-    </linearGradient>
-    <linearGradient id="chromeInnerD" x1="1" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#3A5870"/>
-      <stop offset="40%"  stop-color="#7A9BB0"/>
-      <stop offset="100%" stop-color="#B8CCE0"/>
-    </linearGradient>
-    <radialGradient id="glassD" cx="40%" cy="35%" r="65%">
-      <stop offset="0%"   stop-color="#D8E8F4"/>
-      <stop offset="60%"  stop-color="#B0C8E0"/>
-      <stop offset="100%" stop-color="#8AAAC4"/>
-    </radialGradient>
-    <linearGradient id="connectorD" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#B0C4D4"/>
-      <stop offset="35%"  stop-color="#E8F0F8"/>
-      <stop offset="65%"  stop-color="#90AABC"/>
-      <stop offset="100%" stop-color="#506070"/>
-    </linearGradient>
-    <linearGradient id="gripD" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#0D0D0D"/>
-      <stop offset="30%"  stop-color="#2A2A2A"/>
-      <stop offset="50%"  stop-color="#383838"/>
-      <stop offset="70%"  stop-color="#1A1A1A"/>
-      <stop offset="100%" stop-color="#080808"/>
-    </linearGradient>
-    <linearGradient id="buildingD" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#0B1929"/>
-      <stop offset="100%" stop-color="#162840"/>
-    </linearGradient>
-    <clipPath id="lensClipD">
-      <circle cx="78" cy="72" r="47"/>
-    </clipPath>
-    <filter id="shadowD">
-      <feDropShadow dx="3" dy="4" stdDeviation="5" flood-color="#000" flood-opacity="0.5"/>
-    </filter>
+    <style>
+      .predio-esq { fill: #888888; }
+      .predio-centro { fill: #4A658A; }
+      .predio-dir { fill: #AAAAAA; }
+      .lupa-borda { stroke: #FFFFFF; fill: none; stroke-width: 8; }
+      .lupa-cabo { stroke: #FFFFFF; stroke-width: 10; stroke-linecap: round; }
+      .linha-base { stroke: #256B93; stroke-width: 4; fill: none; }
+      .texto-titulo { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 52px; fill: #FFFFFF; }
+      .texto-subtitulo { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 24px; fill: #C49759; letter-spacing: 4px; }
+      .janela { fill: #FFFFFF; }
+    </style>
   </defs>
 
-  <!-- Fundo escuro -->
-  <rect width="440" height="170" fill="#0B1929" rx="8"/>
+  <rect x="235" y="100" width="45" height="100" class="predio-dir" />
+  <rect x="245" y="110" width="5" height="80" class="janela" />
+  <rect x="260" y="110" width="5" height="80" class="janela" />
 
-  <!-- LUPA -->
-  <g filter="url(#shadowD)">
-    <circle cx="78" cy="72" r="58" fill="url(#chromeD)"/>
-    <circle cx="78" cy="72" r="52" fill="url(#chromeInnerD)"/>
-    <circle cx="78" cy="72" r="49" fill="#3A5870"/>
-    <circle cx="78" cy="72" r="47" fill="url(#glassD)"/>
+  <rect x="165" y="60" width="65" height="140" class="predio-centro" />
+  <rect x="175" y="75" width="5" height="30" class="janela" />
+  <rect x="195" y="75" width="5" height="20" class="janela" />
+  <rect x="215" y="75" width="5" height="30" class="janela" />
+  <rect x="175" y="160" width="5" height="30" class="janela" />
+  <rect x="195" y="160" width="5" height="30" class="janela" />
+  <rect x="215" y="160" width="5" height="30" class="janela" />
 
-    <g clip-path="url(#lensClipD)">
-      <rect x="28"  y="78"  width="20" height="42" fill="url(#buildingD)"/>
-      <rect x="31"  y="82"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="39"  y="82"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="31"  y="90"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="39"  y="90"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="31"  y="98"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="39"  y="98"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
+  <path d="M 100 150 L 130 125 L 160 150 V 200 H 100 Z" class="predio-esq" />
+  <rect x="110" y="165" width="10" height="10" class="janela" />
+  <rect x="125" y="165" width="10" height="10" class="janela" />
+  <rect x="140" y="165" width="10" height="10" class="janela" />
 
-      <rect x="54"  y="36"  width="28" height="84" fill="url(#buildingD)"/>
-      <rect x="57"  y="50"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="67"  y="50"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="57"  y="60"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="67"  y="60"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="57"  y="70"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="67"  y="70"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="57"  y="80"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="67"  y="80"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="57"  y="90"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="67"  y="90"  width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="57"  y="100" width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="67"  y="100" width="7"  height="5"  fill="#B0C8E0" opacity="0.45"/>
+  <path d="M 80 205 Q 200 195 320 205" class="linha-base" />
 
-      <rect x="88"  y="60"  width="23" height="60" fill="url(#buildingD)"/>
-      <rect x="91"  y="65"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="99"  y="65"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="91"  y="74"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="99"  y="74"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="91"  y="83"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="99"  y="83"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="91"  y="92"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="99"  y="92"  width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="91"  y="101" width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
-      <rect x="99"  y="101" width="6"  height="4"  fill="#B0C8E0" opacity="0.45"/>
+  <circle cx="195" cy="125" r="30" class="lupa-borda" />
+  <circle cx="195" cy="125" r="26" class="predio-centro" opacity="0.8"/> <circle cx="205" cy="115" r="4" fill="#FFFFFF" /> <line x1="216" y1="146" x2="245" y2="175" class="lupa-cabo" />
 
-      <rect x="22" y="116" width="112" height="4" fill="#C49759"/>
-      <ellipse cx="56" cy="46" rx="22" ry="10" fill="white" opacity="0.18" transform="rotate(-30 56 46)"/>
-    </g>
-
-    <circle cx="78" cy="72" r="47" fill="none" stroke="#2A4060" stroke-width="2"/>
-  </g>
-
-  <!-- CABO -->
-  <line x1="124" y1="120" x2="137" y2="133" stroke="url(#connectorD)" stroke-width="14" stroke-linecap="round"/>
-  <line x1="135" y1="131" x2="168" y2="164" stroke="url(#gripD)" stroke-width="20" stroke-linecap="round"/>
-  <line x1="136" y1="131" x2="168" y2="163" stroke="white" stroke-width="5" stroke-linecap="round" opacity="0.1"/>
-
-  <!-- Separador -->
-  <line x1="190" y1="30" x2="190" y2="140" stroke="white" stroke-width="1.5" opacity="0.1"/>
-
-  <!-- MULDER (branco) -->
-  <text x="204" y="97"
-        font-family="'Franklin Gothic Demi', 'Arial Black', Impact, sans-serif"
-        font-size="62" font-weight="900" fill="#FFFFFF" letter-spacing="-1.5">MULDER</text>
-
-  <!-- ENGENHARIA (dourado) -->
-  <text x="207" y="126"
-        font-family="'Franklin Gothic Demi', 'Arial Narrow', Arial, sans-serif"
-        font-size="15" fill="#C49759" letter-spacing="9.5" font-weight="700">ENGENHARIA</text>
-
+  <text x="200" y="260" text-anchor="middle" class="texto-titulo">MULDER</text>
+  <text x="200" y="285" text-anchor="middle" class="texto-subtitulo">ENGENHARIA</text>
 </svg>
