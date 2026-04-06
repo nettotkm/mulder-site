@@ -93,21 +93,21 @@ function setupLupa(canvasEl, imgEl, scrollAnchorEl, opts) {
 
 // ─── Configurações ────────────────────────────────────────────────────────────
 const setupLupaHero = {
-  startX:    0.20,  // posição X inicial (0 = esquerda, 1 = direita)
-  amplitude: 0.22,  // largura da oscilação lateral do S
-  startY:    0.30,  // posição Y inicial (0 = topo, 1 = base)
-  travelY:   0.62,  // quanto desce no total
-  radius:    0.10,  // tamanho da lupa
-  speed:     1.0,   // velocidade (maior = mais lento)
+  startX:    0.50,  // posição X inicial (0 = esquerda, 1 = direita)
+  amplitude: 0.20,  // largura da oscilação lateral do S
+  startY:    0.15,  // posição Y inicial (0 = topo, 1 = base)
+  travelY:   0.70,  // quanto desce no total
+  radius:    0.15,  // tamanho da lupa
+  speed:     0.40,   // velocidade (maior = mais lento)
 }
 
 const setupLupaAbout = {
   startX:    0.25,
-  amplitude: 0.20,
+  amplitude: 0.30,
   startY:    0.18,
   travelY:   0.60,
-  radius:    0.10,
-  speed:     1.0,
+  radius:    0.15,
+  speed:     0.5,
 }
 
 // ─── Instâncias ───────────────────────────────────────────────────────────────
@@ -124,6 +124,93 @@ setupLupa(
   document.querySelector('#about-media').closest('section'),
   setupLupaAbout
 )
+
+// ─── Lupa hover — Portfólio ───────────────────────────────────────────────────
+function setupLupaPortfolio() {
+  const section = document.getElementById('portfolio-section')
+  if (!section) return
+
+  const RADIUS = 90  // raio da lente em px (tamanho fixo, não relativo)
+  const ZOOM   = 2.2
+
+  // Canvas flutuante (fixed, segue o cursor)
+  const floatCanvas = document.createElement('canvas')
+  floatCanvas.style.cssText = 'position:fixed;pointer-events:none;z-index:200;display:none;'
+  document.body.appendChild(floatCanvas)
+
+  const floatLupa = document.createElement('img')
+  floatLupa.src = LUPA_PNG_SRC
+  floatLupa.style.cssText = 'position:fixed;pointer-events:none;z-index:201;mix-blend-mode:multiply;display:none;'
+  document.body.appendChild(floatLupa)
+
+  const ctx = floatCanvas.getContext('2d')
+
+  // Cache das imagens já carregadas
+  const imgCache = new Map()
+  const getPhoto = (src) => {
+    if (!imgCache.has(src)) {
+      const img = new Image()
+      img.crossOrigin = 'anonymous'
+      img.src = src
+      imgCache.set(src, img)
+    }
+    return imgCache.get(src)
+  }
+
+  const render = (mouseX, mouseY, photo, imgRect) => {
+    const R    = RADIUS
+    const size = R * 2
+    floatCanvas.width  = size
+    floatCanvas.height = size
+    floatCanvas.style.left = (mouseX - R) + 'px'
+    floatCanvas.style.top  = (mouseY - R) + 'px'
+
+    ctx.clearRect(0, 0, size, size)
+
+    // Zoom centrado no cursor dentro da imagem
+    ctx.save()
+    ctx.beginPath()
+    ctx.arc(R, R, R, 0, Math.PI * 2)
+    ctx.clip()
+
+    const ix = (mouseX - imgRect.left) / imgRect.width
+    const iy = (mouseY - imgRect.top)  / imgRect.height
+    const sw = imgRect.width  * ZOOM
+    const sh = imgRect.height * ZOOM
+    ctx.drawImage(photo, R - ix * sw, R - iy * sh, sw, sh)
+    ctx.restore()
+
+    // PNG da lupa alinhado ao canvas
+    const pngW = R / LUPA_R
+    const pngH = pngW / LUPA_AR
+    floatLupa.style.width  = pngW + 'px'
+    floatLupa.style.height = pngH + 'px'
+    floatLupa.style.left   = (mouseX - LUPA_CX * pngW) + 'px'
+    floatLupa.style.top    = (mouseY - LUPA_CY * pngH) + 'px'
+  }
+
+  const show = () => {
+    floatCanvas.style.display = 'block'
+    floatLupa.style.display   = 'block'
+  }
+  const hide = () => {
+    floatCanvas.style.display = 'none'
+    floatLupa.style.display   = 'none'
+  }
+
+  section.querySelectorAll('img').forEach(img => {
+    const photo = getPhoto(img.src)  // pré-carrega
+
+    img.addEventListener('mouseenter', show)
+    img.addEventListener('mouseleave', hide)
+    img.addEventListener('mousemove', (e) => {
+      if (!photo.complete) return
+      render(e.clientX, e.clientY, photo, img.getBoundingClientRect())
+    })
+  })
+}
+
+setupLupaPortfolio()
 
 // ─── Navbar ──────────────────────────────────────────────────────────────────
 const btn   = document.getElementById('menuBtn')
