@@ -130,7 +130,7 @@ function setupLupaPortfolio() {
   const section = document.getElementById('portfolio-section')
   if (!section) return
 
-  const RADIUS = 90  // raio da lente em px (tamanho fixo, não relativo)
+  const RADIUS = 50 // raio da lente em px (tamanho fixo, não relativo)
   const ZOOM   = 2.2
 
   // Canvas flutuante (fixed, segue o cursor)
