@@ -74,7 +74,7 @@
   <!-- ═══════════════════════════════════════════════════ -->
   <!-- HERO                                               -->
   <!-- ═══════════════════════════════════════════════════ -->
-  <section class="pt-20 bg-surface min-h-screen flex items-center">
+  <section id="hero-section" class="pt-20 bg-surface min-h-screen flex items-center">
     <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
 
       <!-- Texto -->
@@ -110,10 +110,11 @@
         </div>
       </div>
 
-      <!-- Imagem hero -->
+      <!-- Imagem hero com lupa -->
       <div class="relative hidden md:block">
-        <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/5]">
+        <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] relative" id="hero-media">
           <img src="assets/images/conjunto-1.jpg" alt="Projetos Mulder Engenharia" class="w-full h-full object-cover" />
+          <canvas id="lupa-canvas" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
         </div>
         <!-- Card flutuante -->
         <div class="absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-lg p-5 flex items-center gap-4">
@@ -172,9 +173,10 @@
   <!-- ═══════════════════════════════════════════════════ -->
   <section class="bg-surface py-24">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-      <div class="rounded-2xl overflow-hidden shadow-lg">
+      <div id="about-media" class="rounded-2xl overflow-hidden shadow-lg relative">
         <img src="assets/images/predio-1.jpg" alt="Mulder Engenharia — Julian Mulder"
           class="w-full h-[460px] object-cover" />
+        <canvas id="lupa-canvas-about" class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
       </div>
       <div>
         <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label mb-4">Sobre Nós</p>

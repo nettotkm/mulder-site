@@ -105,6 +105,11 @@ select:focus {
 .badge-outline-accent { background: transparent; color: #C49759; border-color: #C49759; }
 .badge-ghost        { background: transparent; color: #6B7685; border-color: #9BA6B2; }
 
+/* ── Vídeo lupa — remover controles nativos ─────────── */
+#lupa-video::-webkit-media-controls            { display: none !important; }
+#lupa-video::-webkit-media-controls-enclosure  { display: none !important; }
+#lupa-video::-webkit-media-controls-overlay-play-button { display: none !important; }
+
 /* ── Inputs — estado de erro ────────────────────────── */
 .input-error {
   border-color: #DC2626 !important;
