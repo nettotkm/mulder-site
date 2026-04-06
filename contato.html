@@ -215,6 +215,22 @@
 
           <div>
             <label class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
+              Tipo de Imóvel
+            </label>
+            <select name="tipo_imovel"
+              class="w-full bg-white border border-surface rounded-lg px-4 py-3 text-sm text-primary transition-all appearance-none">
+              <option value="" disabled selected>Selecione o tipo de imóvel</option>
+              <option value="condominio-residencial">Condomínio Residencial</option>
+              <option value="condominio-comercial">Condomínio Comercial</option>
+              <option value="residencial-unifamiliar">Residência Unifamiliar</option>
+              <option value="comercial">Imóvel Comercial</option>
+              <option value="industrial">Industrial / Galpão</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-primary font-heading font-semibold uppercase tracking-widest text-label mb-2">
               Mensagem
             </label>
             <textarea name="mensagem" rows="4" placeholder="Descreva brevemente o que você precisa..."

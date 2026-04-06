@@ -25,10 +25,10 @@
   <!-- NAVBAR                                             -->
   <!-- ═══════════════════════════════════════════════════ -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-surface shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
+    <div class="nav-inner max-w-7xl mx-auto px-6 flex items-center justify-between h-20 transition-all duration-300">
 
       <a href="index.html" class="flex-shrink-0">
-        <img src="assets/icons/logo.svg" alt="Mulder Engenharia" class="h-20" />
+        <img src="assets/icons/logo.svg" alt="Mulder Engenharia" class="nav-logo h-20 transition-all duration-300" />
       </a>
 
       <div class="hidden md:flex items-center gap-8">
@@ -93,11 +93,11 @@
 
         <div class="flex flex-wrap gap-4 mb-10 items-center">
           <a href="contato.html"
-            class="btn btn-primary btn-lg whitespace-nowrap">
+            class="btn btn-primary btn-lg whitespace-nowrap btn-magnetic">
             Solicitar análise técnica &rarr;
           </a>
           <a href="https://wa.me/5548999360922" target="_blank"
-            class="btn btn-outline-dark btn-md whitespace-nowrap">
+            class="btn btn-outline-dark btn-md whitespace-nowrap btn-magnetic">
             Falar com o engenheiro &#8599;
           </a>
         </div>
@@ -148,20 +148,20 @@
       <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label mb-3">Resultados</p>
       <h2 class="font-heading text-h2 font-bold text-white mb-16">Excelência Sem Concessões</h2>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
-        <div>
-          <p class="font-heading text-display font-bold text-accent mb-2">100+</p>
+        <div class="reveal">
+          <p class="font-heading text-display font-bold text-accent mb-2" data-counter="100" data-suffix="+">100+</p>
           <p class="text-neutral-400 text-body-sm uppercase tracking-wide">Projetos Concluídos</p>
         </div>
-        <div>
-          <p class="font-heading text-display font-bold text-accent mb-2">98%</p>
+        <div class="reveal reveal-delay-1">
+          <p class="font-heading text-display font-bold text-accent mb-2" data-counter="98" data-suffix="%">98%</p>
           <p class="text-neutral-400 text-body-sm uppercase tracking-wide">Satisfação dos Clientes</p>
         </div>
-        <div>
-          <p class="font-heading text-display font-bold text-accent mb-2">10+</p>
+        <div class="reveal reveal-delay-2">
+          <p class="font-heading text-display font-bold text-accent mb-2" data-counter="10" data-suffix="+">10+</p>
           <p class="text-neutral-400 text-body-sm uppercase tracking-wide">Anos de Experiência</p>
         </div>
-        <div>
-          <p class="font-heading text-display font-bold text-accent mb-2">3</p>
+        <div class="reveal reveal-delay-3">
+          <p class="font-heading text-display font-bold text-accent mb-2" data-counter="3" data-suffix="">3</p>
           <p class="text-neutral-400 text-body-sm uppercase tracking-wide">Segmentos Atendidos</p>
         </div>
       </div>
@@ -210,7 +210,7 @@
       <div class="grid md:grid-cols-3 gap-8">
 
         <!-- Fiscalização -->
-        <div class="card-service bg-primary rounded-2xl p-8 flex flex-col gap-6">
+        <div class="card-service bg-primary rounded-2xl p-8 flex flex-col gap-6 reveal">
           <div class="bg-white bg-opacity-10 rounded-xl p-4 w-fit">
             <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -231,7 +231,7 @@
         </div>
 
         <!-- Laudos -->
-        <div class="card-service bg-primary rounded-2xl p-8 flex flex-col gap-6">
+        <div class="card-service bg-primary rounded-2xl p-8 flex flex-col gap-6 reveal reveal-delay-1">
           <div class="bg-white bg-opacity-10 rounded-xl p-4 w-fit">
             <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -250,7 +250,7 @@
         </div>
 
         <!-- Judicial -->
-        <div class="card-service bg-primary rounded-2xl p-8 flex flex-col gap-6">
+        <div class="card-service bg-primary rounded-2xl p-8 flex flex-col gap-6 reveal reveal-delay-2">
           <div class="bg-white bg-opacity-10 rounded-xl p-4 w-fit">
             <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -283,27 +283,27 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="rounded-xl overflow-hidden shadow-md aspect-square group">
           <img src="assets/images/predio-1.jpg" alt="Fiscalização predial"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 img-graded" />
         </div>
         <div class="rounded-xl overflow-hidden shadow-md aspect-square group">
           <img src="assets/images/predio-2.jpg" alt="Laudo comercial"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 img-graded" />
         </div>
         <div class="rounded-xl overflow-hidden shadow-md aspect-square group">
           <img src="assets/images/predio-3.jpg" alt="Vistoria predial"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 img-graded" />
         </div>
         <div class="rounded-xl overflow-hidden shadow-md aspect-square group">
           <img src="assets/images/predio-4.jpg" alt="Inspeção de obra"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 img-graded" />
         </div>
         <div class="rounded-xl overflow-hidden shadow-md aspect-square group">
           <img src="assets/images/conjunto-1.jpg" alt="Conjunto residencial"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 img-graded" />
         </div>
         <div class="rounded-xl overflow-hidden shadow-md aspect-square group">
           <img src="assets/images/conjunto-2.jpg" alt="Fiscalização de obras"
-            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 img-graded" />
         </div>
       </div>
     </div>

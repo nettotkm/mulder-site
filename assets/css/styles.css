@@ -20,12 +20,19 @@ body {
 }
 
 .card-service {
-  transition: transform 0.25s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 
 .card-service:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(11,25,41,0.22);
+}
+
+.card-service:hover .card-service-icon {
+  color: #C49759;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 input:focus,
@@ -104,6 +111,41 @@ select:focus {
 .badge-outline      { background: transparent; color: #0B1929; border-color: #0B1929; }
 .badge-outline-accent { background: transparent; color: #C49759; border-color: #C49759; }
 .badge-ghost        { background: transparent; color: #6B7685; border-color: #9BA6B2; }
+
+/* ── Scroll Reveal ──────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(.22,.68,0,1.2), transform 0.7s cubic-bezier(.22,.68,0,1.2);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── Sticky Header ──────────────────────────────────── */
+nav.nav-scrolled {
+  box-shadow: 0 4px 24px rgba(11,25,41,0.10);
+}
+
+/* ── Magnetic buttons ───────────────────────────────── */
+.btn-magnetic {
+  transition: transform 0.2s cubic-bezier(.22,.68,0,1.4), opacity 0.2s ease, background 0.2s ease;
+  will-change: transform;
+}
+
+/* ── Image color grading ────────────────────────────── */
+.img-graded {
+  filter: saturate(0.82) brightness(0.96) contrast(1.04);
+  transition: filter 0.4s ease;
+}
+.img-graded:hover {
+  filter: saturate(1) brightness(1) contrast(1);
+}
 
 /* ── Vídeo lupa — remover controles nativos ─────────── */
 #lupa-video::-webkit-media-controls            { display: none !important; }

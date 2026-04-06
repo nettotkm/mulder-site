@@ -98,16 +98,16 @@ const setupLupaHero = {
   startY:    0.15,  // posição Y inicial (0 = topo, 1 = base)
   travelY:   0.70,  // quanto desce no total
   radius:    0.15,  // tamanho da lupa
-  speed:     0.40,   // velocidade (maior = mais lento)
+  speed:     0.50,   // velocidade (maior = mais lento)
 }
 
 const setupLupaAbout = {
-  startX:    0.25,
-  amplitude: 0.30,
-  startY:    0.18,
+  startX:    0.35,
+  amplitude: 0.25,
+  startY:    0.20,
   travelY:   0.60,
   radius:    0.15,
-  speed:     0.5,
+  speed:     0.50,
 }
 
 // ─── Instâncias ───────────────────────────────────────────────────────────────
@@ -212,7 +212,15 @@ function setupLupaPortfolio() {
 
 setupLupaPortfolio()
 
-// ─── Navbar ──────────────────────────────────────────────────────────────────
+// ─── Navbar shadow on scroll ─────────────────────────────────────────────────
+const nav = document.querySelector('nav')
+
+window.addEventListener('scroll', () => {
+  if (!nav) return
+  nav.classList.toggle('nav-scrolled', window.scrollY > 60)
+}, { passive: true })
+
+// ─── Navbar toggle ───────────────────────────────────────────────────────────
 const btn   = document.getElementById('menuBtn')
 const menu  = document.getElementById('mobileMenu')
 const open  = document.getElementById('iconOpen')
@@ -222,4 +230,53 @@ btn.addEventListener('click', () => {
   menu.classList.toggle('hidden')
   open.classList.toggle('hidden')
   close.classList.toggle('hidden')
+})
+
+// ─── Scroll Reveal ───────────────────────────────────────────────────────────
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible')
+      revealObserver.unobserve(e.target)
+    }
+  })
+}, { threshold: 0.12 })
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el))
+
+// ─── Counter animation ───────────────────────────────────────────────────────
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return
+    const el      = e.target
+    const target  = parseFloat(el.dataset.counter)
+    const suffix  = el.dataset.suffix || ''
+    const dur     = 1800
+    const start   = performance.now()
+
+    const tick = (now) => {
+      const prog = Math.min((now - start) / dur, 1)
+      const ease = 1 - Math.pow(1 - prog, 3)
+      const val  = Math.round(ease * target)
+      el.textContent = val + suffix
+      if (prog < 1) requestAnimationFrame(tick)
+    }
+    requestAnimationFrame(tick)
+    counterObserver.unobserve(el)
+  })
+}, { threshold: 0.5 })
+
+document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el))
+
+// ─── Magnetic Buttons ────────────────────────────────────────────────────────
+document.querySelectorAll('.btn-magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const r  = btn.getBoundingClientRect()
+    const x  = e.clientX - r.left - r.width  / 2
+    const y  = e.clientY - r.top  - r.height / 2
+    btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`
+  })
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = ''
+  })
 })
