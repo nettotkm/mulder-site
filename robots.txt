@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nettotkm.github.io/mulder-site/sitemap.xml
