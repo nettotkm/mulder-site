@@ -121,7 +121,7 @@ setupLupa(
 setupLupa(
   document.getElementById('lupa-canvas-about'),
   document.querySelector('#about-media img'),
-  document.querySelector('#about-media').closest('section'),
+  document.querySelector('#about-media')?.closest('section'),
   setupLupaAbout
 )
 
