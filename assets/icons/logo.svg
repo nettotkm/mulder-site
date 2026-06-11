@@ -1,40 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 48 265 248" width="100%" height="100%">
-  <defs>
-    <style>
-      .predio-esq { fill: #888888; } /* Cinza do prédio esquerdo */
-      .predio-centro { fill: #4A658A; } /* Azul do prédio central */
-      .predio-dir { fill: #AAAAAA; } /* Cinza do prédio direito */
-      .lupa-borda { stroke: #1A2A40; fill: none; stroke-width: 8; }
-      .lupa-cabo { stroke: #1A2A40; stroke-width: 10; stroke-linecap: round; }
-      .linha-base { stroke: #256B93; stroke-width: 4; fill: none; }
-      .texto-titulo { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 52px; fill: #0B1929; }
-      .texto-subtitulo { font-family: 'Arial', sans-serif; font-weight: bold; font-size: 24px; fill: #C49759; letter-spacing: 4px; }
-      .janela { fill: #FFFFFF; }
-    </style>
-  </defs>
-
-  <rect x="235" y="100" width="45" height="100" class="predio-dir" />
-  <rect x="245" y="110" width="5" height="80" class="janela" />
-  <rect x="260" y="110" width="5" height="80" class="janela" />
-
-  <rect x="165" y="60" width="65" height="140" class="predio-centro" />
-  <rect x="175" y="75" width="5" height="30" class="janela" />
-  <rect x="195" y="75" width="5" height="20" class="janela" />
-  <rect x="215" y="75" width="5" height="30" class="janela" />
-  <rect x="175" y="160" width="5" height="30" class="janela" />
-  <rect x="195" y="160" width="5" height="30" class="janela" />
-  <rect x="215" y="160" width="5" height="30" class="janela" />
-
-  <path d="M 100 150 L 130 125 L 160 150 V 200 H 100 Z" class="predio-esq" />
-  <rect x="110" y="165" width="10" height="10" class="janela" />
-  <rect x="125" y="165" width="10" height="10" class="janela" />
-  <rect x="140" y="165" width="10" height="10" class="janela" />
-
-  <path d="M 80 205 Q 200 195 320 205" class="linha-base" />
-
-  <circle cx="195" cy="125" r="30" class="lupa-borda" />
-  <circle cx="195" cy="125" r="26" class="predio-centro" opacity="0.8"/> <circle cx="205" cy="115" r="4" fill="#FFFFFF" /> <line x1="216" y1="146" x2="245" y2="175" class="lupa-cabo" />
-
-  <text x="200" y="260" text-anchor="middle" class="texto-titulo">MULDER</text>
-  <text x="200" y="285" text-anchor="middle" class="texto-subtitulo">ENGENHARIA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 80" width="380" height="80">
+  <!-- Lupa -->
+  <circle cx="38" cy="34" r="22" fill="none" stroke="#0B1929" stroke-width="5" stroke-linecap="round"/>
+  <line x1="54" y1="50" x2="72" y2="68" stroke="#0B1929" stroke-width="5" stroke-linecap="round"/>
+  <!-- MULDER ENGENHARIA -->
+  <text
+    x="92" y="32"
+    font-family="'Libre Franklin', 'Arial Black', Arial, sans-serif"
+    font-weight="800"
+    font-size="22"
+    fill="#0B1929"
+    letter-spacing="2"
+  >MULDER ENGENHARIA</text>
+  <!-- LAUDOS E FISCALIZAÇÕES -->
+  <text
+    x="93" y="54"
+    font-family="'Libre Franklin', Arial, sans-serif"
+    font-weight="600"
+    font-size="11"
+    fill="#C49759"
+    letter-spacing="3.5"
+  >LAUDOS E FISCALIZAÇÕES</text>
 </svg>
