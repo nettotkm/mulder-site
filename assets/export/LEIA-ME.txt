@@ -1,0 +1,28 @@
+MULDER ENGENHARIA — Arquivos da marca
+=====================================
+
+CORES
+  Azul-marinho   #142C5D
+  Âmbar          #E8A54C
+Fonte: Archivo (Google Fonts, gratuita)
+
+PNG (alta resolução, fundo transparente) — uso geral: site, e-mail, laudos, cartão
+  logo-horizontal-cor.png / -mono.png / -branco.png
+  logo-empilhado-cor.png  / -mono.png / -branco.png
+    cor    = lupa colorida + texto azul        (fundo claro)
+    mono   = tudo azul-marinho, 1 cor           (laudos, carimbo, fax)
+    branco = lupa e texto brancos               (fundo escuro/azul)
+
+FAVICON (quadrado azul, lupa branca)
+  favicon-512.png  → ícone de app / redes
+  favicon-180.png  → apple-touch-icon
+  favicon-32.png   → favicon do navegador
+
+SVG (vetor, texto já convertido em curvas — não precisa ter a fonte instalada)
+  logo-horizontal-*.svg / logo-empilhado-*.svg
+  IMPORTANTE: cada SVG usa a lupa do arquivo lupa.png / lupa_navy.png / lupa_white.png
+  que está NESTA mesma pasta. Mantenha o SVG junto desses PNGs, ou abra no
+  Illustrator/Figma e "incorpore" a imagem para gerar um arquivo único.
+
+SÍMBOLO ISOLADO
+  lupa.png (cor) · lupa_navy.png (azul) · lupa_white.png (branco) — fundo transparente
