@@ -3,15 +3,15 @@ tailwind.config = {
     extend: {
       colors: {
         /* Azuis — escala primary */
-        'primary':     '#0B1929',  /* primary-900 */
-        'primary-800': '#071018',  /* primary-800 */
-        'primary-700': '#2A3360',  /* primary-700 */
-        'primary-600': '#3F4A85',  /* primary-600 */
+        'primary':     '#1A3C6E',  /* navy médio */
+        'primary-800': '#0F2548',  /* navy escuro */
+        'primary-700': '#2A4F8A',  /* navy médio-claro */
+        'primary-600': '#4270B0',  /* azul médio */
 
-        /* Dourado — escala accent */
-        'accent':     '#C49759',  /* accent-300 */
-        'accent-200': '#E8DCCB',  /* accent-200 */
-        'accent-100': '#F5EFE6',  /* accent-100 */
+        /* Marrom — escala accent */
+        'accent':     '#B8926A',  /* marrom terroso */
+        'accent-200': '#E8D9CC',  /* bege quente */
+        'accent-100': '#F5EDE6',  /* bege claro */
 
         /* Neutros */
         'surface':      '#F4F6F8',  /* neutral-100 */

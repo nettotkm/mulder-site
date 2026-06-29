@@ -1,6 +1,6 @@
 body {
   font-family: 'Inter', sans-serif;
-  color: #0B1929;
+  color: #1A3C6E;
 }
 
 .nav-link {
@@ -15,7 +15,7 @@ body {
   left: 0;
   right: 0;
   height: 2px;
-  background: #C49759;
+  background: #eda064;
   border-radius: 2px;
 }
 
@@ -26,11 +26,11 @@ body {
 
 .card-service:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 48px rgba(11,25,41,0.22);
+  box-shadow: 0 24px 48px rgba(26,60,110,0.22);
 }
 
 .card-service:hover .card-service-icon {
-  color: #C49759;
+  color: #B8926A;
   transform: scale(1.1);
   transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -39,8 +39,8 @@ input:focus,
 textarea:focus,
 select:focus {
   outline: none;
-  border-color: #C49759;
-  box-shadow: 0 0 0 3px rgba(196, 151, 89, 0.15);
+  border-color: #B8926A;
+  box-shadow: 0 0 0 3px rgba(184, 146, 106, 0.15);
 }
 
 /* ── Botões — design system ─────────────────────────── */
@@ -66,19 +66,19 @@ select:focus {
 .btn-sm { padding: 8px  16px; font-size: 11px; line-height: 1; }
 
 /* Variantes */
-.btn-primary { background: #0B1929; color: #FFFFFF; border-color: #0B1929; }
+.btn-primary { background: #1A3C6E; color: #FFFFFF; border-color: #1A3C6E; }
 .btn-primary:hover { opacity: 0.85; }
 
-.btn-accent { background: #C49759; color: #0B1929; border-color: #C49759; }
+.btn-accent { background: #B8926A; color: #1A3C6E; border-color: #B8926A; }
 .btn-accent:hover { opacity: 0.9; }
 
-.btn-outline-dark { background: transparent; color: #0B1929; border-color: #0B1929; }
-.btn-outline-dark:hover { background: #0B1929; color: #FFFFFF; }
+.btn-outline-dark { background: transparent; color: #1A3C6E; border-color: #1A3C6E; }
+.btn-outline-dark:hover { background: #1A3C6E; color: #FFFFFF; }
 
 .btn-outline-light { background: transparent; color: #FFFFFF; border-color: #FFFFFF; }
-.btn-outline-light:hover { background: #FFFFFF; color: #0B1929; }
+.btn-outline-light:hover { background: #FFFFFF; color: #1A3C6E; }
 
-.btn-ghost { background: transparent; color: #C49759; border-color: rgba(196,151,89,0.35); opacity: 0.65; }
+.btn-ghost { background: transparent; color: #B8926A; border-color: rgba(184,146,106,0.35); opacity: 0.65; }
 .btn-ghost:hover { opacity: 1; }
 
 /* ── Cards — design system ──────────────────────────── */
@@ -106,10 +106,10 @@ select:focus {
   border: 2px solid transparent;
 }
 
-.badge-solid-dark   { background: #0B1929; color: #FFFFFF; border-color: #0B1929; }
-.badge-solid-accent { background: #C49759; color: #0B1929; border-color: #C49759; }
-.badge-outline      { background: transparent; color: #0B1929; border-color: #0B1929; }
-.badge-outline-accent { background: transparent; color: #C49759; border-color: #C49759; }
+.badge-solid-dark   { background: #1A3C6E; color: #FFFFFF; border-color: #1A3C6E; }
+.badge-solid-accent { background: #B8926A; color: #1A3C6E; border-color: #B8926A; }
+.badge-outline      { background: transparent; color: #1A3C6E; border-color: #1A3C6E; }
+.badge-outline-accent { background: transparent; color: #B8926A; border-color: #B8926A; }
 .badge-ghost        { background: transparent; color: #6B7685; border-color: #9BA6B2; }
 
 /* ── Scroll Reveal ──────────────────────────────────── */
@@ -129,7 +129,7 @@ select:focus {
 
 /* ── Sticky Header ──────────────────────────────────── */
 nav.nav-scrolled {
-  box-shadow: 0 4px 24px rgba(11,25,41,0.10);
+  box-shadow: 0 4px 24px rgba(26,60,110,0.10);
 }
 
 /* ── Magnetic buttons ───────────────────────────────── */
