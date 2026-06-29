@@ -199,13 +199,9 @@ function playLupaIntro(img, { radius = 80, zoom = 2.0, duration = 1800 } = {}) {
     canvas.height = H
     ctx.clearRect(0, 0, W, H)
 
-    // Trajeto: entra pelo canto superior-esquerdo, varre em arco suave até sair pelo inferior-direito
-    const ease = progress < 0.5
-      ? 2 * progress * progress
-      : 1 - Math.pow(-2 * progress + 2, 2) / 2
-
-    const gx = W * (0.20 + ease * 0.60)
-    const gy = H * (0.20 + ease * 0.60)
+    // Trajeto em S: Y desce linearmente, X oscila em seno (um ciclo completo = S)
+    const gy = H * (0.15 + progress * 0.70)
+    const gx = W * (0.50 + 0.30 * Math.sin(progress * Math.PI * 2))
     const R  = radius
 
     // Fade in/out nas bordas da animação
