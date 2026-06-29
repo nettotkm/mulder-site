@@ -125,15 +125,10 @@ setupLupa(
   setupLupaAbout
 )
 
-// ─── Lupa hover — Portfólio ───────────────────────────────────────────────────
-function setupLupaPortfolio() {
-  const section = document.getElementById('portfolio-section')
-  if (!section) return
+// ─── Lupa hover — genérica (portfólio + hero + about) ────────────────────────
+function setupLupaHover(images, radius = 50, zoom = 2.2) {
+  if (!images || images.length === 0) return
 
-  const RADIUS = 50 // raio da lente em px (tamanho fixo, não relativo)
-  const ZOOM   = 2.2
-
-  // Canvas flutuante (fixed, segue o cursor)
   const floatCanvas = document.createElement('canvas')
   floatCanvas.style.cssText = 'position:fixed;pointer-events:none;z-index:200;display:none;'
   document.body.appendChild(floatCanvas)
@@ -145,7 +140,6 @@ function setupLupaPortfolio() {
 
   const ctx = floatCanvas.getContext('2d')
 
-  // Cache das imagens já carregadas
   const imgCache = new Map()
   const getPhoto = (src) => {
     if (!imgCache.has(src)) {
@@ -158,7 +152,7 @@ function setupLupaPortfolio() {
   }
 
   const render = (mouseX, mouseY, photo, imgRect) => {
-    const R    = RADIUS
+    const R    = radius
     const size = R * 2
     floatCanvas.width  = size
     floatCanvas.height = size
@@ -166,8 +160,6 @@ function setupLupaPortfolio() {
     floatCanvas.style.top  = (mouseY - R) + 'px'
 
     ctx.clearRect(0, 0, size, size)
-
-    // Zoom centrado no cursor dentro da imagem
     ctx.save()
     ctx.beginPath()
     ctx.arc(R, R, R, 0, Math.PI * 2)
@@ -175,12 +167,11 @@ function setupLupaPortfolio() {
 
     const ix = (mouseX - imgRect.left) / imgRect.width
     const iy = (mouseY - imgRect.top)  / imgRect.height
-    const sw = imgRect.width  * ZOOM
-    const sh = imgRect.height * ZOOM
+    const sw = imgRect.width  * zoom
+    const sh = imgRect.height * zoom
     ctx.drawImage(photo, R - ix * sw, R - iy * sh, sw, sh)
     ctx.restore()
 
-    // PNG da lupa alinhado ao canvas
     const pngW = R / LUPA_R
     const pngH = pngW / LUPA_AR
     floatLupa.style.width  = pngW + 'px'
@@ -189,18 +180,11 @@ function setupLupaPortfolio() {
     floatLupa.style.top    = (mouseY - LUPA_CY * pngH) + 'px'
   }
 
-  const show = () => {
-    floatCanvas.style.display = 'block'
-    floatLupa.style.display   = 'block'
-  }
-  const hide = () => {
-    floatCanvas.style.display = 'none'
-    floatLupa.style.display   = 'none'
-  }
+  const show = () => { floatCanvas.style.display = 'block'; floatLupa.style.display = 'block' }
+  const hide = () => { floatCanvas.style.display = 'none';  floatLupa.style.display = 'none'  }
 
-  section.querySelectorAll('img').forEach(img => {
-    const photo = getPhoto(img.src)  // pré-carrega
-
+  images.forEach(img => {
+    const photo = getPhoto(img.src)
     img.addEventListener('mouseenter', show)
     img.addEventListener('mouseleave', hide)
     img.addEventListener('mousemove', (e) => {
@@ -210,7 +194,15 @@ function setupLupaPortfolio() {
   })
 }
 
-setupLupaPortfolio()
+// Portfólio
+const portfolioImgs = document.querySelectorAll('#portfolio-section img')
+setupLupaHover(portfolioImgs, 50, 2.2)
+
+// Hero e About — radius maior para imagens maiores
+const heroImg  = document.querySelector('#hero-media img')
+const aboutImg = document.querySelector('#about-media img')
+const heroAboutImgs = [heroImg, aboutImg].filter(Boolean)
+setupLupaHover(heroAboutImgs, 80, 2.0)
 
 // ─── Navbar shadow on scroll ─────────────────────────────────────────────────
 const nav = document.querySelector('nav')
