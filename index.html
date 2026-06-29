@@ -105,6 +105,15 @@
     href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <style>
+    .carousel-card{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.18);transition:transform .7s cubic-bezier(.4,0,.2,1),opacity .7s ease,box-shadow .7s ease;transform-origin:center center;will-change:transform,opacity}
+    .carousel-card.c-active{transform:translateX(0) rotateY(0deg) scale(1);opacity:1;z-index:5;box-shadow:0 16px 48px rgba(0,0,0,.28)}
+    .carousel-card.c-prev1{transform:translateX(-6%) rotateY(30deg) scale(.82);opacity:.7;z-index:4}
+    .carousel-card.c-prev2{transform:translateX(-10%) rotateY(44deg) scale(.64);opacity:.35;z-index:3}
+    .carousel-card.c-next1{transform:translateX(58%) rotateY(-30deg) scale(.82);opacity:.8;z-index:4}
+    .carousel-card.c-next2{transform:translateX(80%) rotateY(-44deg) scale(.64);opacity:.4;z-index:3}
+    .carousel-card.c-hidden{opacity:0;z-index:1;pointer-events:none}
+  </style>
 </head>
 
 <body class="bg-white">
@@ -161,11 +170,11 @@
   <!-- ═══════════════════════════════════════════════════ -->
   <!-- HERO                                               -->
   <!-- ═══════════════════════════════════════════════════ -->
-  <section id="hero-section" class="pt-20 bg-surface min-h-screen flex items-center">
-    <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+  <section id="hero-section" class="pt-20 bg-surface min-h-screen flex items-center overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-5 gap-12 items-center w-full">
 
       <!-- Texto -->
-      <div>
+      <div class="md:col-span-2 relative z-10">
         <span class="inline-block text-accent font-heading font-semibold uppercase tracking-widest text-label mb-5">
           ✦ Seu Parceiro de Confiança
         </span>
@@ -197,14 +206,45 @@
       </div>
 
       <!-- Imagem hero com lupa -->
-      <div class="relative hidden md:block">
-        <div class="rounded-2xl overflow-hidden shadow-lg aspect-[4/5] relative" id="hero-media">
-          <img src="assets/images/park-das-palmeiras.jpg" alt="Projetos Mulder Engenharia"
-            class="w-full h-full object-cover" />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent flex flex-col justify-end px-5 pb-20 pt-5 gap-2 pointer-events-none">
-            <span class="badge badge-solid-accent self-start">Laudo de Entrega de Obra</span>
-            <p class="text-white font-heading font-bold text-body leading-tight">Park das Palmeiras</p>
+      <div class="relative hidden md:block md:col-span-3">
+        <!-- Carrossel 3D -->
+        <div id="hero-media" style="perspective:1200px;" class="relative w-full aspect-[4/5] overflow-visible">
+          <div id="hero-carousel" class="relative w-full h-full" style="transform-style:preserve-3d; overflow:visible;">
+            <div class="carousel-card c-active" data-label="Fiscalização de Obra">
+              <img src="assets/images/julian-drone.jpg" alt="Julian Mulder fiscalizando obra" class="w-full h-full object-cover object-center" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+                <span class="badge badge-solid-accent self-start text-xs">Fiscalização de Obra</span>
+                <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
+              </div>
+            </div>
+            <div class="carousel-card c-next1" data-label="Engenharia Diagnóstica">
+              <img src="assets/images/julian-perfil.jpg" alt="Julian Mulder engenheiro" class="w-full h-full object-cover object-top" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+                <span class="badge badge-solid-accent self-start text-xs">Engenharia Diagnóstica</span>
+                <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
+              </div>
+            </div>
+            <div class="carousel-card c-next2" data-label="Inspeção Técnica">
+              <img src="assets/images/julian-inspecao.jpg" alt="Julian Mulder inspeção" class="w-full h-full object-cover object-center" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+                <span class="badge badge-solid-accent self-start text-xs">Inspeção Técnica</span>
+                <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
+              </div>
+            </div>
+            <div class="carousel-card c-prev2" data-label="Laudo Técnico">
+              <img src="assets/images/julian-retrato.jpg" alt="Julian Mulder diretor" class="w-full h-full object-cover object-top" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+                <span class="badge badge-solid-accent self-start text-xs">Laudo Técnico</span>
+                <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
+              </div>
+            </div>
+            <div class="carousel-card c-prev1" data-label="Acompanhamento de Obra">
+              <img src="assets/images/julian-obra.jpg" alt="Julian Mulder acompanhamento" class="w-full h-full object-cover object-center" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+                <span class="badge badge-solid-accent self-start text-xs">Acompanhamento de Obra</span>
+                <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Card flutuante -->
@@ -726,6 +766,32 @@
   <!-- JS                                                 -->
   <!-- ═══════════════════════════════════════════════════ -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Carrossel 3D hero
+    (function() {
+      var cards = Array.from(document.querySelectorAll('#hero-carousel .carousel-card'));
+      if (!cards.length) return;
+      var total = cards.length;
+      var current = 0;
+      var cls = ['c-active','c-next1','c-next2','c-prev1','c-prev2','c-hidden'];
+      function classFor(offset) {
+        var m = ((offset % total) + total) % total;
+        if (m === 0) return 'c-active';
+        if (m === 1) return 'c-next1';
+        if (m === 2) return 'c-next2';
+        if (m === total - 1) return 'c-prev1';
+        if (m === total - 2) return 'c-prev2';
+        return 'c-hidden';
+      }
+      function render() {
+        cards.forEach(function(card, i) {
+          card.className = 'carousel-card ' + classFor(i - current);
+        });
+      }
+      render();
+      setInterval(function() { current = (current + 1) % total; render(); }, 3500);
+    })();
+  </script>
 
   <!-- Botão flutuante WhatsApp — mobile only -->
   <a href="https://wa.me/5548999360922?text=Olá%2C%20gostaria%20de%20solicitar%20um%20orçamento." target="_blank"
