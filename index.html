@@ -106,13 +106,53 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <style>
-    .carousel-card{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.18);transition:transform .7s cubic-bezier(.4,0,.2,1),opacity .7s ease,box-shadow .7s ease;transform-origin:center center;will-change:transform,opacity}
-    .carousel-card.c-active{transform:translateX(0) rotateY(0deg) scale(1);opacity:1;z-index:5;box-shadow:0 16px 48px rgba(0,0,0,.28)}
-    .carousel-card.c-prev1{transform:translateX(-32%) rotateY(28deg) scale(.78);opacity:.65;z-index:4}
-    .carousel-card.c-prev2{transform:translateX(-50%) rotateY(40deg) scale(.60);opacity:.3;z-index:3}
-    .carousel-card.c-next1{transform:translateX(46%) rotateY(-28deg) scale(.78);opacity:.75;z-index:4}
-    .carousel-card.c-next2{transform:translateX(64%) rotateY(-40deg) scale(.60);opacity:.35;z-index:3}
-    .carousel-card.c-hidden{opacity:0;z-index:1;pointer-events:none}
+    .carousel-card {
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .18);
+      transition: transform .7s cubic-bezier(.4, 0, .2, 1), opacity .7s ease, box-shadow .7s ease;
+      transform-origin: center center;
+      will-change: transform, opacity
+    }
+
+    .carousel-card.c-active {
+      transform: translateX(0) rotateY(0deg) scale(1);
+      opacity: 1;
+      z-index: 5;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, .28)
+    }
+
+    .carousel-card.c-prev1 {
+      transform: translateX(-32%) rotateY(28deg) scale(.78);
+      opacity: .65;
+      z-index: 4
+    }
+
+    .carousel-card.c-prev2 {
+      transform: translateX(-50%) rotateY(40deg) scale(.60);
+      opacity: .3;
+      z-index: 3
+    }
+
+    .carousel-card.c-next1 {
+      transform: translateX(46%) rotateY(-28deg) scale(.78);
+      opacity: .75;
+      z-index: 4
+    }
+
+    .carousel-card.c-next2 {
+      transform: translateX(64%) rotateY(-40deg) scale(.60);
+      opacity: .35;
+      z-index: 3
+    }
+
+    .carousel-card.c-hidden {
+      opacity: 0;
+      z-index: 1;
+      pointer-events: none
+    }
   </style>
 </head>
 
@@ -208,39 +248,50 @@
       <!-- Imagem hero com lupa -->
       <div class="relative hidden md:block md:col-span-3">
         <!-- Carrossel 3D -->
-        <div id="hero-media" style="perspective:1200px;" class="relative w-full max-w-[420px] mx-auto aspect-[4/5] overflow-visible">
+        <div id="hero-media" style="perspective:1200px;"
+          class="relative w-full max-w-[420px] mx-auto aspect-[4/5] overflow-visible">
           <div id="hero-carousel" class="relative w-full h-full" style="transform-style:preserve-3d; overflow:visible;">
             <div class="carousel-card c-active" data-label="Fiscalização de Obra">
-              <img src="assets/images/julian-drone.jpg" alt="Julian Mulder fiscalizando obra" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+              <img src="assets/images/julian-drone.jpg" alt="Julian Mulder fiscalizando obra"
+                class="w-full h-full object-cover object-center" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
                 <span class="badge badge-solid-accent self-start text-xs">Fiscalização de Obra</span>
                 <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
               </div>
             </div>
             <div class="carousel-card c-next1" data-label="Engenharia Diagnóstica">
-              <img src="assets/images/julian-perfil.jpg" alt="Julian Mulder engenheiro" class="w-full h-full object-cover object-top" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+              <img src="assets/images/julian-perfil.jpg" alt="Julian Mulder engenheiro"
+                class="w-full h-full object-cover object-top" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
                 <span class="badge badge-solid-accent self-start text-xs">Engenharia Diagnóstica</span>
                 <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
               </div>
             </div>
             <div class="carousel-card c-next2" data-label="Inspeção Técnica">
-              <img src="assets/images/julian-inspecao.jpg" alt="Julian Mulder inspeção" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+              <img src="assets/images/julian-inspecao.jpg" alt="Julian Mulder inspeção"
+                class="w-full h-full object-cover object-center" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
                 <span class="badge badge-solid-accent self-start text-xs">Inspeção Técnica</span>
                 <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
               </div>
             </div>
             <div class="carousel-card c-prev2" data-label="Laudo Técnico">
-              <img src="assets/images/julian-retrato.jpg" alt="Julian Mulder diretor" class="w-full h-full object-cover object-top" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+              <img src="assets/images/julian-retrato.jpg" alt="Julian Mulder diretor"
+                class="w-full h-full object-cover object-top" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
                 <span class="badge badge-solid-accent self-start text-xs">Laudo Técnico</span>
                 <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
               </div>
             </div>
             <div class="carousel-card c-prev1" data-label="Acompanhamento de Obra">
-              <img src="assets/images/julian-obra.jpg" alt="Julian Mulder acompanhamento" class="w-full h-full object-cover object-center" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
+              <img src="assets/images/julian-obra.jpg" alt="Julian Mulder acompanhamento"
+                class="w-full h-full object-cover object-center" />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end px-4 pb-4 gap-1 pointer-events-none">
                 <span class="badge badge-solid-accent self-start text-xs">Acompanhamento de Obra</span>
                 <p class="text-white font-heading font-bold text-sm leading-tight">Julian Mulder · Diretor</p>
               </div>
@@ -262,7 +313,7 @@
           <!-- Card flutuante 2 -->
           <div class="absolute -top-6 -right-6 bg-primary rounded-2xl shadow-lg p-5 flex items-center gap-4 z-10">
             <div>
-              <p class="font-heading font-bold text-accent text-h3 leading-none">10+</p>
+              <p class="font-heading font-bold text-accent text-h3 leading-none">12+</p>
               <p class="text-neutral-400 text-body-sm mt-1">Anos de experiência</p>
             </div>
           </div>
@@ -768,12 +819,12 @@
   <script src="assets/js/main.js"></script>
   <script>
     // Carrossel 3D hero
-    (function() {
+    (function () {
       var cards = Array.from(document.querySelectorAll('#hero-carousel .carousel-card'));
       if (!cards.length) return;
       var total = cards.length;
       var current = 0;
-      var cls = ['c-active','c-next1','c-next2','c-prev1','c-prev2','c-hidden'];
+      var cls = ['c-active', 'c-next1', 'c-next2', 'c-prev1', 'c-prev2', 'c-hidden'];
       function classFor(offset) {
         var m = ((offset % total) + total) % total;
         if (m === 0) return 'c-active';
@@ -784,12 +835,12 @@
         return 'c-hidden';
       }
       function render() {
-        cards.forEach(function(card, i) {
+        cards.forEach(function (card, i) {
           card.className = 'carousel-card ' + classFor(i - current);
         });
       }
       render();
-      setInterval(function() { current = (current + 1) % total; render(); }, 3500);
+      setInterval(function () { current = (current + 1) % total; render(); }, 3500);
     })();
   </script>
 
