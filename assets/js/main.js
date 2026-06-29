@@ -171,6 +171,98 @@ const aboutImg = document.querySelector('#about-media img')
 const heroAboutImgs = [heroImg, aboutImg].filter(Boolean)
 setupLupaHover(heroAboutImgs, 80, 2.0)
 
+// ─── Intro sweep — passada única ao entrar na tela ────────────────────────────
+function playLupaIntro(img, { radius = 80, zoom = 2.0, duration = 1800 } = {}) {
+  if (!img) return
+
+  const container = img.parentElement
+  const photo = new Image()
+  photo.crossOrigin = 'anonymous'
+  photo.src = img.src
+
+  const canvas = document.createElement('canvas')
+  canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:10;'
+  container.style.position = 'relative'
+  container.appendChild(canvas)
+
+  const lupaEl = document.createElement('img')
+  lupaEl.src = LUPA_PNG_SRC
+  lupaEl.style.cssText = 'position:absolute;pointer-events:none;mix-blend-mode:multiply;z-index:11;'
+  container.appendChild(lupaEl)
+
+  const ctx = canvas.getContext('2d')
+
+  const draw = (progress) => {
+    const W = container.offsetWidth
+    const H = container.offsetHeight
+    canvas.width  = W
+    canvas.height = H
+    ctx.clearRect(0, 0, W, H)
+
+    // Trajeto: entra pelo canto superior-esquerdo, varre em arco suave até sair pelo inferior-direito
+    const ease = progress < 0.5
+      ? 2 * progress * progress
+      : 1 - Math.pow(-2 * progress + 2, 2) / 2
+
+    const gx = W * (0.20 + ease * 0.60)
+    const gy = H * (0.20 + ease * 0.60)
+    const R  = radius
+
+    // Fade in/out nas bordas da animação
+    const opacity = progress < 0.1 ? progress / 0.1
+                  : progress > 0.85 ? (1 - progress) / 0.15
+                  : 1
+    ctx.globalAlpha = opacity
+
+    ctx.save()
+    ctx.beginPath()
+    ctx.arc(gx, gy, R, 0, Math.PI * 2)
+    ctx.clip()
+    const sw = W * zoom
+    const sh = H * zoom
+    ctx.drawImage(photo, gx - (gx / W) * sw, gy - (gy / H) * sh, sw, sh)
+    ctx.restore()
+    ctx.globalAlpha = 1
+
+    const pngW = R / LUPA_R
+    const pngH = pngW / LUPA_AR
+    lupaEl.style.opacity = opacity
+    lupaEl.style.width   = pngW + 'px'
+    lupaEl.style.height  = pngH + 'px'
+    lupaEl.style.left    = (gx - LUPA_CX * pngW) + 'px'
+    lupaEl.style.top     = (gy - LUPA_CY * pngH) + 'px'
+  }
+
+  const cleanup = () => {
+    canvas.remove()
+    lupaEl.remove()
+  }
+
+  const animate = (startTime) => (now) => {
+    const progress = Math.min((now - startTime) / duration, 1)
+    draw(progress)
+    if (progress < 1) requestAnimationFrame(animate(startTime))
+    else cleanup()
+  }
+
+  const start = () => requestAnimationFrame((now) => animate(now)(now))
+
+  if (photo.complete) start()
+  else photo.onload = start
+}
+
+// Dispara a passada quando a imagem entrar na tela
+const introObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return
+    introObserver.unobserve(e.target)
+    // Pequeno delay para a imagem já estar visível
+    setTimeout(() => playLupaIntro(e.target), 400)
+  })
+}, { threshold: 0.4 })
+
+heroAboutImgs.forEach(img => introObserver.observe(img))
+
 // ─── Navbar shadow on scroll ─────────────────────────────────────────────────
 const nav = document.querySelector('nav')
 
