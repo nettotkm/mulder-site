@@ -91,39 +91,6 @@ function setupLupa(canvasEl, imgEl, scrollAnchorEl, opts) {
   }
 }
 
-// ─── Configurações ────────────────────────────────────────────────────────────
-const setupLupaHero = {
-  startX:    0.50,  // posição X inicial (0 = esquerda, 1 = direita)
-  amplitude: 0.20,  // largura da oscilação lateral do S
-  startY:    0.15,  // posição Y inicial (0 = topo, 1 = base)
-  travelY:   0.70,  // quanto desce no total
-  radius:    0.15,  // tamanho da lupa
-  speed:     0.50,   // velocidade (maior = mais lento)
-}
-
-const setupLupaAbout = {
-  startX:    0.35,
-  amplitude: 0.25,
-  startY:    0.20,
-  travelY:   0.60,
-  radius:    0.15,
-  speed:     0.50,
-}
-
-// ─── Instâncias ───────────────────────────────────────────────────────────────
-setupLupa(
-  document.getElementById('lupa-canvas'),
-  document.querySelector('#hero-media img'),
-  document.getElementById('hero-section'),
-  setupLupaHero
-)
-
-setupLupa(
-  document.getElementById('lupa-canvas-about'),
-  document.querySelector('#about-media img'),
-  document.querySelector('#about-media')?.closest('section'),
-  setupLupaAbout
-)
 
 // ─── Lupa hover — genérica (portfólio + hero + about) ────────────────────────
 function setupLupaHover(images, radius = 50, zoom = 2.2) {
