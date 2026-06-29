@@ -108,10 +108,10 @@
   <style>
     .carousel-card{position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.18);transition:transform .7s cubic-bezier(.4,0,.2,1),opacity .7s ease,box-shadow .7s ease;transform-origin:center center;will-change:transform,opacity}
     .carousel-card.c-active{transform:translateX(0) rotateY(0deg) scale(1);opacity:1;z-index:5;box-shadow:0 16px 48px rgba(0,0,0,.28)}
-    .carousel-card.c-prev1{transform:translateX(-6%) rotateY(30deg) scale(.82);opacity:.7;z-index:4}
-    .carousel-card.c-prev2{transform:translateX(-10%) rotateY(44deg) scale(.64);opacity:.35;z-index:3}
-    .carousel-card.c-next1{transform:translateX(58%) rotateY(-30deg) scale(.82);opacity:.8;z-index:4}
-    .carousel-card.c-next2{transform:translateX(80%) rotateY(-44deg) scale(.64);opacity:.4;z-index:3}
+    .carousel-card.c-prev1{transform:translateX(-32%) rotateY(28deg) scale(.78);opacity:.65;z-index:4}
+    .carousel-card.c-prev2{transform:translateX(-50%) rotateY(40deg) scale(.60);opacity:.3;z-index:3}
+    .carousel-card.c-next1{transform:translateX(46%) rotateY(-28deg) scale(.78);opacity:.75;z-index:4}
+    .carousel-card.c-next2{transform:translateX(64%) rotateY(-40deg) scale(.60);opacity:.35;z-index:3}
     .carousel-card.c-hidden{opacity:0;z-index:1;pointer-events:none}
   </style>
 </head>
@@ -208,7 +208,7 @@
       <!-- Imagem hero com lupa -->
       <div class="relative hidden md:block md:col-span-3">
         <!-- Carrossel 3D -->
-        <div id="hero-media" style="perspective:1200px;" class="relative w-full aspect-[4/5] overflow-visible">
+        <div id="hero-media" style="perspective:1200px;" class="relative w-full max-w-[420px] mx-auto aspect-[4/5] overflow-visible">
           <div id="hero-carousel" class="relative w-full h-full" style="transform-style:preserve-3d; overflow:visible;">
             <div class="carousel-card c-active" data-label="Fiscalização de Obra">
               <img src="assets/images/julian-drone.jpg" alt="Julian Mulder fiscalizando obra" class="w-full h-full object-cover object-center" />
@@ -246,25 +246,25 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- Card flutuante -->
-        <div class="absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-lg p-5 flex items-center gap-4">
-          <div class="bg-accent rounded-xl p-3">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+          <!-- Card flutuante -->
+          <div class="absolute -bottom-6 -left-8 bg-white rounded-2xl shadow-lg p-5 flex items-center gap-4 z-10">
+            <div class="bg-accent rounded-xl p-3">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-heading font-bold text-primary text-h3 leading-none">+50</p>
+              <p class="text-neutral-400 text-body-sm mt-1">Condomínios atendidos</p>
+            </div>
           </div>
-          <div>
-            <p class="font-heading font-bold text-primary text-h3 leading-none">+50</p>
-            <p class="text-neutral-400 text-body-sm mt-1">Condomínios atendidos</p>
-          </div>
-        </div>
-        <!-- Card flutuante 2 -->
-        <div class="absolute -top-6 -right-6 bg-primary rounded-2xl shadow-lg p-5 flex items-center gap-4">
-          <div>
-            <p class="font-heading font-bold text-accent text-h3 leading-none">10+</p>
-            <p class="text-neutral-400 text-body-sm mt-1">Anos de experiência</p>
+          <!-- Card flutuante 2 -->
+          <div class="absolute -top-6 -right-6 bg-primary rounded-2xl shadow-lg p-5 flex items-center gap-4 z-10">
+            <div>
+              <p class="font-heading font-bold text-accent text-h3 leading-none">10+</p>
+              <p class="text-neutral-400 text-body-sm mt-1">Anos de experiência</p>
+            </div>
           </div>
         </div>
       </div>
