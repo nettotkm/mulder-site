@@ -171,57 +171,6 @@ setupLupaHover(portfolioImgs, 50, 2.2)
 const aboutImg = document.querySelector('#about-media img')
 setupLupaHover(aboutImg ? [aboutImg] : [], 80, 2.0)
 
-// Hero — lupa na imagem do card ativo
-function getActiveHeroImg() {
-  return document.querySelector('#hero-carousel .c-active img')
-}
-
-const heroMediaEl = document.getElementById('hero-media')
-if (heroMediaEl) {
-  const floatCanvas = document.createElement('canvas')
-  floatCanvas.style.cssText = 'position:fixed;pointer-events:none;z-index:200;display:none;'
-  document.body.appendChild(floatCanvas)
-  const floatLupa = document.createElement('img')
-  floatLupa.src = LUPA_PNG_SRC
-  floatLupa.style.cssText = 'position:fixed;pointer-events:none;z-index:201;mix-blend-mode:multiply;display:none;'
-  document.body.appendChild(floatLupa)
-  const ctx = floatCanvas.getContext('2d')
-  const radius = 80, zoom = 2.0
-
-  const renderHero = (mouseX, mouseY) => {
-    const img = getActiveHeroImg()
-    if (!img?.complete) return
-    const imgRect = img.getBoundingClientRect()
-    const R = radius, size = R * 2
-    floatCanvas.width  = size
-    floatCanvas.height = size
-    floatCanvas.style.left = (mouseX - R) + 'px'
-    floatCanvas.style.top  = (mouseY - R) + 'px'
-    ctx.clearRect(0, 0, size, size)
-    ctx.save()
-    ctx.beginPath()
-    ctx.arc(R, R, R, 0, Math.PI * 2)
-    ctx.clip()
-    const ix = (mouseX - imgRect.left) / imgRect.width
-    const iy = (mouseY - imgRect.top)  / imgRect.height
-    const sw = imgRect.width * zoom, sh = imgRect.height * zoom
-    ctx.drawImage(img, R - ix * sw, R - iy * sh, sw, sh)
-    ctx.restore()
-    const pngW = R / LUPA_R, pngH = pngW / LUPA_AR
-    floatLupa.style.width  = pngW + 'px'
-    floatLupa.style.height = pngH + 'px'
-    floatLupa.style.left   = (mouseX - LUPA_CX * pngW) + 'px'
-    floatLupa.style.top    = (mouseY - LUPA_CY * pngH) + 'px'
-  }
-
-  heroMediaEl.addEventListener('mouseenter', () => {
-    floatCanvas.style.display = 'block'; floatLupa.style.display = 'block'
-  })
-  heroMediaEl.addEventListener('mouseleave', () => {
-    floatCanvas.style.display = 'none'; floatLupa.style.display = 'none'
-  })
-  heroMediaEl.addEventListener('mousemove', (e) => renderHero(e.clientX, e.clientY))
-}
 
 // ─── Intro sweep — passada única ao entrar na tela ────────────────────────────
 function playLupaIntro(img, { radius = 80, zoom = 2.0, duration = 1800 } = {}) {
@@ -309,8 +258,7 @@ const introObserver = new IntersectionObserver((entries) => {
   })
 }, { threshold: 0.4 })
 
-const firstHeroImg = document.querySelector('#hero-carousel .carousel-card img')
-const introImgs = [firstHeroImg, aboutImg].filter(Boolean)
+const introImgs = [aboutImg].filter(Boolean)
 introImgs.forEach(img => introObserver.observe(img))
 
 // ─── Navbar shadow on scroll ─────────────────────────────────────────────────
