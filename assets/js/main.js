@@ -168,8 +168,9 @@ setupLupaHover(portfolioImgs, 50, 2.2)
 // Carrossel 3D hero — inicializado via <script> inline no index.html
 
 // About
-const aboutImg = document.querySelector('#about-media img')
-setupLupaHover(aboutImg ? [aboutImg] : [], 80, 2.0)
+const aboutImgs = document.querySelectorAll('#about-media img')
+const aboutImg = aboutImgs[0]
+setupLupaHover(aboutImgs, 80, 2.0)
 
 
 // ─── Intro sweep — passada única ao entrar na tela ────────────────────────────
