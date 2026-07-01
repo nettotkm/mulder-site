@@ -330,39 +330,76 @@
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label mb-3">Tecnologia</p>
       <h2 class="font-heading text-h2 font-bold text-white mb-16">Equipamentos que elevam a precisão dos laudos</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-        <div class="reveal">
-          <div class="rounded-xl overflow-hidden mb-5 w-24 h-24">
-            <img src="assets/equipamentos/drone.png" alt="Drone" class="w-full h-full object-cover" />
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+
+        <!-- Drone -->
+        <div class="reveal group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/equipamentos/drone.png" alt="Drone" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h3 class="font-heading text-h3 font-bold text-white mb-3">Drone</h3>
-          <p class="text-neutral-400 text-body-sm leading-relaxed">Inspeções de fachadas, telhados e áreas de difícil
-            acesso.</p>
-        </div>
-        <div class="reveal reveal-delay-1">
-          <div class="rounded-xl overflow-hidden mb-5 w-24 h-24">
-            <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor de Umidade" class="w-full h-full object-cover" />
+          <div class="p-5 flex flex-col gap-1 flex-1">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Inspeção Aérea</p>
+            <h3 class="font-heading font-bold text-primary text-body-lg">Drone</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">Inspeções de fachadas, telhados e áreas de difícil acesso.</p>
+            <div class="flex justify-end mt-auto pt-3">
+              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </span>
+            </div>
           </div>
-          <h3 class="font-heading text-h3 font-bold text-white mb-3">Medidor de Umidade</h3>
-          <p class="text-neutral-400 text-body-sm leading-relaxed">Identificação de infiltrações e umidade oculta com
-            mais precisão.</p>
         </div>
-        <div class="reveal reveal-delay-2">
-          <div class="rounded-xl overflow-hidden mb-5 w-24 h-24">
-            <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Martelo de Percussão" class="w-full h-full object-cover" />
+
+        <!-- Medidor de Umidade -->
+        <div class="reveal reveal-delay-1 group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor de Umidade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
-          <h3 class="font-heading text-h3 font-bold text-white mb-3">Teste de Estanqueidade</h3>
-          <p class="text-neutral-400 text-body-sm leading-relaxed">Uso de corantes e métodos técnicos para localizar
-            falhas e vazamentos.</p>
-        </div>
-        <div class="reveal reveal-delay-3">
-          <div class="rounded-xl overflow-hidden mb-5 w-24 h-24">
-            <img src="assets/equipamentos/camera.jpeg" alt="Câmera de Registro" class="w-full h-full object-cover" />
+          <div class="p-5 flex flex-col gap-1 flex-1">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Diagnóstico</p>
+            <h3 class="font-heading font-bold text-primary text-body-lg">Medidor de Umidade</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">Identificação de infiltrações e umidade oculta com precisão.</p>
+            <div class="flex justify-end mt-auto pt-3">
+              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </span>
+            </div>
           </div>
-          <h3 class="font-heading text-h3 font-bold text-white mb-3">Registro Técnico em Campo</h3>
-          <p class="text-neutral-400 text-body-sm leading-relaxed">Fotos, medições e evidências documentadas para
-            laudos mais completos.</p>
         </div>
+
+        <!-- Teste de Estanqueidade -->
+        <div class="reveal reveal-delay-2 group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Martelo de Percussão" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col gap-1 flex-1">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Estanqueidade</p>
+            <h3 class="font-heading font-bold text-primary text-body-lg">Teste de Estanqueidade</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">Corantes e métodos técnicos para localizar falhas e vazamentos.</p>
+            <div class="flex justify-end mt-auto pt-3">
+              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Registro Técnico -->
+        <div class="reveal reveal-delay-3 group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/equipamentos/camera.jpeg" alt="Câmera de Registro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </div>
+          <div class="p-5 flex flex-col gap-1 flex-1">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Documentação</p>
+            <h3 class="font-heading font-bold text-primary text-body-lg">Registro Técnico em Campo</h3>
+            <p class="text-neutral-500 text-sm leading-relaxed">Fotos, medições e evidências documentadas para laudos completos.</p>
+            <div class="flex justify-end mt-auto pt-3">
+              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
