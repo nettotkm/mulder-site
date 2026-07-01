@@ -228,15 +228,17 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el))
 
-// ─── Magnetic Buttons ────────────────────────────────────────────────────────
-document.querySelectorAll('.btn-magnetic').forEach(btn => {
-  btn.addEventListener('mousemove', (e) => {
-    const r  = btn.getBoundingClientRect()
-    const x  = e.clientX - r.left - r.width  / 2
-    const y  = e.clientY - r.top  - r.height / 2
-    btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`
+// ─── Magnetic Buttons (desktop only) ─────────────────────────────────────────
+if (window.matchMedia('(hover: hover)').matches) {
+  document.querySelectorAll('.btn-magnetic').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r  = btn.getBoundingClientRect()
+      const x  = e.clientX - r.left - r.width  / 2
+      const y  = e.clientY - r.top  - r.height / 2
+      btn.style.transform = `translate(${x * 0.18}px, ${y * 0.18}px)`
+    })
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = ''
+    })
   })
-  btn.addEventListener('mouseleave', () => {
-    btn.style.transform = ''
-  })
-})
+}
