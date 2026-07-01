@@ -334,123 +334,71 @@
       <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label mb-3">Tecnologia</p>
       <h2 class="font-heading text-h2 font-bold text-white mb-16">Equipamentos que elevam a precisão dos laudos</h2>
 
-      <!-- Spread carousel equipamentos -->
-      <div class="relative flex items-center justify-center" style="height: 420px;">
-        <div id="equip-spread" class="relative flex items-center justify-center w-full h-full">
+      <!-- Fila horizontal de equipamentos -->
+      <div class="flex items-end justify-center gap-3 -mx-6 px-4" style="height:380px;">
 
-          <div class="equip-card" data-index="0">
-            <img src="assets/equipamentos/drone.png" alt="Drone" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Inspeção Aérea</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Drone</p>
-            </div>
+        <div class="equip-tile flex-shrink-0 w-44 h-64 rounded-2xl overflow-hidden relative shadow-lg">
+          <img src="assets/equipamentos/camera.jpeg" alt="Câmera" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Documentação</p>
+            <p class="text-white font-heading font-bold text-sm leading-tight">Registro Técnico</p>
           </div>
-
-          <div class="equip-card" data-index="1">
-            <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor de Umidade" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Diagnóstico</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Medidor de Umidade</p>
-            </div>
-          </div>
-
-          <div class="equip-card" data-index="2">
-            <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Teste de Estanqueidade" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Estanqueidade</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Teste de Estanqueidade</p>
-            </div>
-          </div>
-
-          <div class="equip-card" data-index="3">
-            <img src="assets/equipamentos/camera.jpeg" alt="Câmera de Registro" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Documentação</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Registro Técnico em Campo</p>
-            </div>
-          </div>
-
-          <div class="equip-card" data-index="4">
-            <img src="assets/equipamentos/drone.png" alt="Drone" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Inspeção Aérea</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Drone</p>
-            </div>
-          </div>
-
-          <div class="equip-card" data-index="5">
-            <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor de Umidade" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Diagnóstico</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Medidor de Umidade</p>
-            </div>
-          </div>
-
-          <div class="equip-card" data-index="6">
-            <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Teste de Estanqueidade" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Estanqueidade</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Teste de Estanqueidade</p>
-            </div>
-          </div>
-
-          <div class="equip-card" data-index="7">
-            <img src="assets/equipamentos/camera.jpeg" alt="Câmera de Registro" class="w-full h-full object-cover object-center" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
-              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Documentação</p>
-              <p class="text-white font-heading font-bold text-body leading-tight">Registro Técnico em Campo</p>
-            </div>
-          </div>
-
         </div>
+
+        <div class="equip-tile flex-shrink-0 w-44 h-72 rounded-2xl overflow-hidden relative shadow-lg">
+          <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Martelo" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Estanqueidade</p>
+            <p class="text-white font-heading font-bold text-sm leading-tight">Teste de Estanqueidade</p>
+          </div>
+        </div>
+
+        <div class="equip-tile flex-shrink-0 w-44 h-80 rounded-2xl overflow-hidden relative shadow-xl">
+          <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Diagnóstico</p>
+            <p class="text-white font-heading font-bold text-sm leading-tight">Medidor de Umidade</p>
+          </div>
+        </div>
+
+        <!-- Card central — maior e elevado -->
+        <div class="equip-tile flex-shrink-0 w-52 h-96 rounded-2xl overflow-hidden relative shadow-2xl" style="margin-bottom:8px;">
+          <img src="assets/equipamentos/drone.png" alt="Drone" class="w-full h-full object-cover object-center" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Inspeção Aérea</p>
+            <p class="text-white font-heading font-bold text-body leading-tight">Drone</p>
+          </div>
+        </div>
+
+        <div class="equip-tile flex-shrink-0 w-44 h-80 rounded-2xl overflow-hidden relative shadow-xl">
+          <img src="assets/equipamentos/camera.jpeg" alt="Câmera" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Documentação</p>
+            <p class="text-white font-heading font-bold text-sm leading-tight">Registro Técnico</p>
+          </div>
+        </div>
+
+        <div class="equip-tile flex-shrink-0 w-44 h-72 rounded-2xl overflow-hidden relative shadow-lg">
+          <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Diagnóstico</p>
+            <p class="text-white font-heading font-bold text-sm leading-tight">Medidor de Umidade</p>
+          </div>
+        </div>
+
+        <div class="equip-tile flex-shrink-0 w-44 h-64 rounded-2xl overflow-hidden relative shadow-lg">
+          <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Martelo" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-4 pointer-events-none">
+            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-0.5">Estanqueidade</p>
+            <p class="text-white font-heading font-bold text-sm leading-tight">Teste de Estanqueidade</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
   </section>
 
-  <style>
-    .equip-card {
-      position: absolute;
-      width: 240px;
-      height: 340px;
-      border-radius: 16px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.6s cubic-bezier(.4,0,.2,1), opacity 0.6s ease, box-shadow 0.6s ease;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    }
-    .equip-card.eq-active {
-      transform: translateX(0) scale(1);
-      opacity: 1;
-      z-index: 5;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
-    }
-    .equip-card.eq-prev1 {
-      transform: translateX(-220px) scale(0.85);
-      opacity: 0.85;
-      z-index: 4;
-    }
-    .equip-card.eq-prev2 {
-      transform: translateX(-390px) scale(0.72);
-      opacity: 0.55;
-      z-index: 3;
-    }
-    .equip-card.eq-next1 {
-      transform: translateX(220px) scale(0.85);
-      opacity: 0.85;
-      z-index: 4;
-    }
-    .equip-card.eq-next2 {
-      transform: translateX(390px) scale(0.72);
-      opacity: 0.55;
-      z-index: 3;
-    }
-    .equip-card.eq-hidden {
-      opacity: 0;
-      z-index: 1;
-      pointer-events: none;
-    }
-  </style>
 
   <!-- ═══════════════════════════════════════════════════ -->
   <!-- ABOUT                                              -->
@@ -994,38 +942,6 @@
       });
     })();
 
-    // Spread carousel equipamentos
-    (function () {
-      var cards = Array.from(document.querySelectorAll('.equip-card'));
-      if (!cards.length) return;
-      var total = cards.length;
-      var current = 0;
-      function classFor(offset) {
-        var m = ((offset % total) + total) % total;
-        if (m === 0) return 'eq-active';
-        if (m === 1) return 'eq-next1';
-        if (m === 2) return 'eq-next2';
-        if (m === total - 1) return 'eq-prev1';
-        if (m === total - 2) return 'eq-prev2';
-        return 'eq-hidden';
-      }
-      function render() {
-        cards.forEach(function (card, i) {
-          card.className = 'equip-card ' + classFor(i - current);
-        });
-      }
-      render();
-      var timer = setInterval(function () { current = (current + 1) % total; render(); }, 3000);
-      cards.forEach(function (card) {
-        card.addEventListener('click', function () {
-          var idx = parseInt(card.dataset.index);
-          current = idx;
-          render();
-          clearInterval(timer);
-          timer = setInterval(function () { current = (current + 1) % total; render(); }, 3000);
-        });
-      });
-    })();
   </script>
 
   <!-- Botão flutuante WhatsApp — mobile only -->
