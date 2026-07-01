@@ -212,3 +212,7 @@ nav.nav-scrolled {
   z-index: 1;
   pointer-events: none;
 }
+
+/* ── Scrollbar invisível (equipamentos mobile) ──────── */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
