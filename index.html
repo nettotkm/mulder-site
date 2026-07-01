@@ -329,103 +329,96 @@
   <!-- ═══════════════════════════════════════════════════ -->
   <!-- STATS                                              -->
   <!-- ═══════════════════════════════════════════════════ -->
-  <section class="bg-primary py-20">
+  <section class="bg-primary py-20 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label mb-3">Tecnologia</p>
       <h2 class="font-heading text-h2 font-bold text-white mb-16">Equipamentos que elevam a precisão dos laudos</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
 
-        <!-- Drone -->
-        <div
-          class="reveal group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="assets/equipamentos/drone.png" alt="Drone"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 flex flex-col gap-1 flex-1">
-            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Inspeção Aérea</p>
-            <h3 class="font-heading font-bold text-primary text-body-lg">Drone</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Inspeções de fachadas, telhados e áreas de difícil
-              acesso.</p>
-            <div class="flex justify-end mt-auto pt-3">
-              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </span>
+      <!-- Spread carousel equipamentos -->
+      <div class="relative flex items-center justify-center" style="height: 420px;">
+        <div id="equip-spread" class="relative flex items-center justify-center w-full h-full">
+
+          <div class="equip-card" data-index="0">
+            <img src="assets/equipamentos/drone.png" alt="Drone" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
+              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Inspeção Aérea</p>
+              <p class="text-white font-heading font-bold text-body leading-tight">Drone</p>
             </div>
           </div>
-        </div>
 
-        <!-- Medidor de Umidade -->
-        <div
-          class="reveal reveal-delay-1 group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor de Umidade"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 flex flex-col gap-1 flex-1">
-            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Diagnóstico</p>
-            <h3 class="font-heading font-bold text-primary text-body-lg">Medidor de Umidade</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Identificação de infiltrações e umidade oculta com
-              precisão.</p>
-            <div class="flex justify-end mt-auto pt-3">
-              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </span>
+          <div class="equip-card" data-index="1">
+            <img src="assets/equipamentos/medidor_de_umidade.jpg" alt="Medidor de Umidade" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
+              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Diagnóstico</p>
+              <p class="text-white font-heading font-bold text-body leading-tight">Medidor de Umidade</p>
             </div>
           </div>
-        </div>
 
-        <!-- Teste de Estanqueidade -->
-        <div
-          class="reveal reveal-delay-2 group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Martelo de Percussão"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 flex flex-col gap-1 flex-1">
-            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Estanqueidade</p>
-            <h3 class="font-heading font-bold text-primary text-body-lg">Teste de Estanqueidade</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Corantes e métodos técnicos para localizar falhas e
-              vazamentos.</p>
-            <div class="flex justify-end mt-auto pt-3">
-              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </span>
+          <div class="equip-card" data-index="2">
+            <img src="assets/equipamentos/martelo_de_borda_plastica_abs.jpeg" alt="Teste de Estanqueidade" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
+              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Estanqueidade</p>
+              <p class="text-white font-heading font-bold text-body leading-tight">Teste de Estanqueidade</p>
             </div>
           </div>
-        </div>
 
-        <!-- Registro Técnico -->
-        <div
-          class="reveal reveal-delay-3 group bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 hover:shadow-md transition-shadow duration-300 flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="assets/equipamentos/camera.jpeg" alt="Câmera de Registro"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-          </div>
-          <div class="p-5 flex flex-col gap-1 flex-1">
-            <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs">Documentação</p>
-            <h3 class="font-heading font-bold text-primary text-body-lg">Registro Técnico em Campo</h3>
-            <p class="text-neutral-500 text-sm leading-relaxed">Fotos, medições e evidências documentadas para laudos
-              completos.</p>
-            <div class="flex justify-end mt-auto pt-3">
-              <span class="w-9 h-9 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10" />
-                </svg>
-              </span>
+          <div class="equip-card" data-index="3">
+            <img src="assets/equipamentos/camera.jpeg" alt="Câmera de Registro" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 pointer-events-none">
+              <p class="text-accent font-heading font-semibold uppercase tracking-widest text-xs mb-1">Documentação</p>
+              <p class="text-white font-heading font-bold text-body leading-tight">Registro Técnico em Campo</p>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
+
     </div>
   </section>
+
+  <style>
+    .equip-card {
+      position: absolute;
+      width: 240px;
+      height: 340px;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.6s cubic-bezier(.4,0,.2,1), opacity 0.6s ease, box-shadow 0.6s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    }
+    .equip-card.eq-active {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+      z-index: 5;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+    .equip-card.eq-prev1 {
+      transform: translateX(-220px) scale(0.85);
+      opacity: 0.85;
+      z-index: 4;
+    }
+    .equip-card.eq-prev2 {
+      transform: translateX(-390px) scale(0.72);
+      opacity: 0.55;
+      z-index: 3;
+    }
+    .equip-card.eq-next1 {
+      transform: translateX(220px) scale(0.85);
+      opacity: 0.85;
+      z-index: 4;
+    }
+    .equip-card.eq-next2 {
+      transform: translateX(390px) scale(0.72);
+      opacity: 0.55;
+      z-index: 3;
+    }
+    .equip-card.eq-hidden {
+      opacity: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+  </style>
 
   <!-- ═══════════════════════════════════════════════════ -->
   <!-- ABOUT                                              -->
@@ -966,6 +959,39 @@
         }
         render();
         setInterval(function () { current = (current + 1) % total; render(); }, 3500);
+      });
+    })();
+
+    // Spread carousel equipamentos
+    (function () {
+      var cards = Array.from(document.querySelectorAll('.equip-card'));
+      if (!cards.length) return;
+      var total = cards.length;
+      var current = 0;
+      function classFor(offset) {
+        var m = ((offset % total) + total) % total;
+        if (m === 0) return 'eq-active';
+        if (m === 1) return 'eq-next1';
+        if (m === 2) return 'eq-next2';
+        if (m === total - 1) return 'eq-prev1';
+        if (m === total - 2) return 'eq-prev2';
+        return 'eq-hidden';
+      }
+      function render() {
+        cards.forEach(function (card, i) {
+          card.className = 'equip-card ' + classFor(i - current);
+        });
+      }
+      render();
+      var timer = setInterval(function () { current = (current + 1) % total; render(); }, 3000);
+      cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          var idx = parseInt(card.dataset.index);
+          current = idx;
+          render();
+          clearInterval(timer);
+          timer = setInterval(function () { current = (current + 1) % total; render(); }, 3000);
+        });
       });
     })();
   </script>
