@@ -216,3 +216,7 @@ nav.nav-scrolled {
 /* ── Scrollbar invisível (equipamentos mobile) ──────── */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── FAQ (details/summary) — remove marcador nativo ─── */
+details summary::-webkit-details-marker { display: none; }
+details summary { outline: none; }

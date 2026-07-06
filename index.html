@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mulder Engenharia — Fiscalização de Obras e Laudos em Florianópolis</title>
+  <title>Laudos, Inspeção Predial e Fiscalização de Obras em Florianópolis | Mulder Engenharia</title>
   <meta name="description"
-    content="Fiscalização de obras, laudos de engenharia e perícias técnicas para condomínios, advogados e pessoa física em Florianópolis, SC. Engenheiro Civil Julian Mulder — CREA." />
+    content="Laudos de engenharia, inspeção predial e fiscalização de obras em Florianópolis e região (São José, Palhoça, Biguaçu). Vistoria cautelar e perícias técnicas com o Engenheiro Civil Julian Mulder — CREA/SC." />
   <meta name="keywords"
-    content="fiscalização de obras florianópolis, laudo de engenharia, vistoria cautelar, perícia engenharia, laudo predial, engenheiro civil florianópolis, Mulder Engenharia" />
+    content="inspeção predial florianópolis, laudo de engenharia florianópolis, fiscalização de obras florianópolis, vistoria cautelar, laudo técnico predial, perícia de engenharia, vistoria predial, engenheiro civil florianópolis, laudo predial são josé palhoça, Mulder Engenharia" />
   <meta name="author" content="Julian Mulder — Mulder Engenharia" />
   <link rel="canonical" href="https://nettotkm.github.io/mulder-site/" />
 
@@ -17,16 +17,16 @@
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:site_name" content="Mulder Engenharia" />
   <meta property="og:url" content="https://nettotkm.github.io/mulder-site/" />
-  <meta property="og:title" content="Mulder Engenharia — Fiscalização de Obras e Laudos em Florianópolis" />
+  <meta property="og:title" content="Laudos, Inspeção Predial e Fiscalização de Obras em Florianópolis | Mulder Engenharia" />
   <meta property="og:description"
-    content="Fiscalização de obras, laudos de engenharia e perícias técnicas para condomínios, advogados e pessoa física em Florianópolis, SC." />
+    content="Laudos de engenharia, inspeção predial e fiscalização de obras em Florianópolis e região. Vistoria cautelar e perícias técnicas com o Engenheiro Civil Julian Mulder — CREA/SC." />
   <meta property="og:image" content="https://nettotkm.github.io/mulder-site/assets/images/park_das_palmeiras.jpg" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mulder Engenharia — Fiscalização de Obras e Laudos em Florianópolis" />
+  <meta name="twitter:title" content="Laudos, Inspeção Predial e Fiscalização de Obras em Florianópolis" />
   <meta name="twitter:description"
-    content="Fiscalização de obras, laudos de engenharia e perícias técnicas em Florianópolis, SC." />
+    content="Laudos de engenharia, inspeção predial e fiscalização de obras em Florianópolis e região. Engenheiro Civil Julian Mulder — CREA/SC." />
   <meta name="twitter:image" content="https://nettotkm.github.io/mulder-site/assets/images/park_das_palmeiras.jpg" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon_32.png" />
@@ -45,6 +45,7 @@
     "image": "https://nettotkm.github.io/mulder-site/assets/images/park_das_palmeiras.jpg",
     "telephone": "+5548999360922",
     "email": "mulderengenharia@gmail.com",
+    "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Florianópolis",
@@ -56,10 +57,19 @@
       "latitude": -27.5954,
       "longitude": -48.5480
     },
-    "areaServed": {
-      "@type": "State",
-      "name": "Grande Florianópolis, SC"
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
     },
+    "areaServed": [
+      { "@type": "City", "name": "Florianópolis" },
+      { "@type": "City", "name": "São José" },
+      { "@type": "City", "name": "Palhoça" },
+      { "@type": "City", "name": "Biguaçu" },
+      { "@type": "AdministrativeArea", "name": "Grande Florianópolis, SC" }
+    ],
     "sameAs": [
       "https://www.instagram.com/mulderengenharia/"
     ],
@@ -71,8 +81,8 @@
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Fiscalização de Obras",
-            "description": "Acompanhamento técnico de obras para condomínios residenciais e comerciais, lojas de shopping e obras em geral em Florianópolis."
+            "name": "Inspeção Predial",
+            "description": "Inspeção predial e vistoria técnica de edificações e condomínios em Florianópolis, avaliando fachadas, estrutura, impermeabilização e conformidade com as normas da ABNT (NBR 16747)."
           }
         },
         {
@@ -80,7 +90,15 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Laudos de Engenharia",
-            "description": " Inspeção Predial Vistoria cautelar de vizinhança, laudo de recebimento de obras, construção em garantia e problemas construtivos."
+            "description": "Laudos técnicos de engenharia: vistoria cautelar de vizinhança, laudo de recebimento de obras, análise de problemas construtivos e laudo predial em Florianópolis e região."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Fiscalização de Obras",
+            "description": "Acompanhamento e fiscalização técnica de obras para condomínios residenciais e comerciais, lojas de shopping e obras em geral em Florianópolis."
           }
         },
         {
@@ -88,11 +106,53 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Perícias e Assistência Técnica Judicial",
-            "description": "Parecer técnico, elaboração de quesitos, acompanhamento de perícias e análise de laudo pericial."
+            "description": "Parecer técnico, elaboração de quesitos, acompanhamento de perícias e análise de laudo pericial para escritórios de advocacia."
           }
         }
       ]
     }
+  }
+  </script>
+
+  <!-- JSON-LD — Perguntas Frequentes (FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "O que é uma inspeção predial e quando ela é necessária?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A inspeção predial é a avaliação técnica das condições de uma edificação — estrutura, fachadas, instalações e impermeabilização — seguindo a norma ABNT NBR 16747. É recomendada periodicamente em condomínios e edifícios para prevenir patologias, garantir a segurança e orientar a manutenção. Atendemos Florianópolis e toda a Grande Florianópolis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto custa um laudo de engenharia em Florianópolis?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O valor de um laudo de engenharia varia conforme o tipo (vistoria cautelar, laudo predial, laudo de recebimento de obra) e a complexidade da edificação. Solicite um orçamento sem compromisso pelo WhatsApp (48) 9 9936-0922 e receba uma avaliação personalizada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre fiscalização de obra e laudo técnico?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A fiscalização de obra é o acompanhamento técnico contínuo durante a execução, verificando qualidade, prazos e conformidade. O laudo técnico é um documento pontual que registra e diagnostica as condições de uma edificação em um dado momento — como uma vistoria cautelar ou uma inspeção predial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "A Mulder Engenharia atende quais cidades?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Atendemos Florianópolis e toda a Grande Florianópolis, incluindo São José, Palhoça, Biguaçu e Santo Amaro da Imperatriz, com serviços de inspeção predial, laudos de engenharia, fiscalização de obras e perícias técnicas."
+        }
+      }
+    ]
   }
   </script>
 
@@ -953,6 +1013,74 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- FAQ — Perguntas Frequentes                         -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section id="faq" class="bg-surface py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="text-accent font-heading font-semibold uppercase tracking-widest text-label text-center mb-4">Dúvidas
+        frequentes</p>
+      <h2 class="font-heading text-h2 font-bold text-primary text-center mb-12">
+        Perguntas frequentes sobre laudos e inspeção predial
+      </h2>
+
+      <div class="space-y-4">
+        <details class="group bg-white rounded-2xl shadow-sm px-6 py-5" open>
+          <summary
+            class="flex items-center justify-between cursor-pointer list-none font-heading font-bold text-primary text-body-lg">
+            O que é uma inspeção predial e quando ela é necessária?
+            <span class="text-accent text-h3 leading-none transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="text-neutral-600 leading-relaxed mt-4">
+            A inspeção predial é a avaliação técnica das condições de uma edificação — estrutura, fachadas, instalações
+            e impermeabilização — seguindo a norma ABNT NBR 16747. É recomendada periodicamente em condomínios e
+            edifícios para prevenir patologias, garantir a segurança e orientar a manutenção. Atendemos Florianópolis e
+            toda a Grande Florianópolis.
+          </p>
+        </details>
+
+        <details class="group bg-white rounded-2xl shadow-sm px-6 py-5">
+          <summary
+            class="flex items-center justify-between cursor-pointer list-none font-heading font-bold text-primary text-body-lg">
+            Quanto custa um laudo de engenharia em Florianópolis?
+            <span class="text-accent text-h3 leading-none transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="text-neutral-600 leading-relaxed mt-4">
+            O valor de um laudo de engenharia varia conforme o tipo (vistoria cautelar, laudo predial, laudo de
+            recebimento de obra) e a complexidade da edificação. Solicite um orçamento sem compromisso pelo WhatsApp
+            (48) 9 9936-0922 e receba uma avaliação personalizada.
+          </p>
+        </details>
+
+        <details class="group bg-white rounded-2xl shadow-sm px-6 py-5">
+          <summary
+            class="flex items-center justify-between cursor-pointer list-none font-heading font-bold text-primary text-body-lg">
+            Qual a diferença entre fiscalização de obra e laudo técnico?
+            <span class="text-accent text-h3 leading-none transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="text-neutral-600 leading-relaxed mt-4">
+            A fiscalização de obra é o acompanhamento técnico contínuo durante a execução, verificando qualidade, prazos
+            e conformidade. O laudo técnico é um documento pontual que registra e diagnostica as condições de uma
+            edificação em um dado momento — como uma vistoria cautelar ou uma inspeção predial.
+          </p>
+        </details>
+
+        <details class="group bg-white rounded-2xl shadow-sm px-6 py-5">
+          <summary
+            class="flex items-center justify-between cursor-pointer list-none font-heading font-bold text-primary text-body-lg">
+            A Mulder Engenharia atende quais cidades?
+            <span class="text-accent text-h3 leading-none transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="text-neutral-600 leading-relaxed mt-4">
+            Atendemos Florianópolis e toda a Grande Florianópolis, incluindo São José, Palhoça, Biguaçu e Santo Amaro
+            da Imperatriz, com serviços de inspeção predial, laudos de engenharia, fiscalização de obras e perícias
+            técnicas.
+          </p>
+        </details>
       </div>
     </div>
   </section>
